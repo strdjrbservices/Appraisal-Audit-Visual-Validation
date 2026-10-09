@@ -1,0 +1,6 @@
+paddleocr
+paddlepaddle
+transformers
+torch
+Pillow
+accelerate
