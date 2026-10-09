@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p09_Photo_1.png",
+  "expected_label": "Comparable 1",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 1",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "exterior view of a residential house with a garage and a driveway",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a residential property that serves as a standard example of a comparable home in a real estate appraisal context."
+  },
+  "validation": {
+    "expected_label": "Comparable 1",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

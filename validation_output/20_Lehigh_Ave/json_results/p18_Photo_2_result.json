@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p18_Photo_2.png",
+  "expected_label": "Prox. to Subject",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Prox. to Subject",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Street-level view of the subject property showing the driveway, front lawn, and parked vehicles.",
+    "confidence": 0.95,
+    "reason": "The image shows the front exterior of the house from the street, which is the standard perspective for demonstrating proximity to the subject property in an appraisal."
+  },
+  "validation": {
+    "expected_label": "Prox. to Subject",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

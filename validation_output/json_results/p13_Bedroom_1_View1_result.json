@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\images\\p13_Bedroom_1_View1.png",
+  "expected_label": "Bedroom 1",
+  "paddleocr": {
+    "text": [
+      "Bedroom.1"
+    ],
+    "boxes": [
+      [
+        [
+          135.0,
+          369.0
+        ],
+        [
+          275.0,
+          369.0
+        ],
+        [
+          275.0,
+          388.0
+        ],
+        [
+          135.0,
+          388.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.93637
+    ],
+    "raw": {
+      "txts": [
+        "Bedroom.1"
+      ],
+      "scores": [
+        0.93637
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Bedroom 1",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A bedroom containing a bed, nightstand, and a door.",
+    "confidence": 1.0,
+    "reason": "The image clearly depicts a bedroom environment with typical bedroom furniture."
+  },
+  "validation": {
+    "expected_label": "Bedroom 1",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

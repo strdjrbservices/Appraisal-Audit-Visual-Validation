@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p14_Photo_2.png",
+  "expected_label": "Subject RIGHT SIDE",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject RIGHT SIDE",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "side exterior view of a residential building with vinyl siding",
+    "confidence": 0.95,
+    "reason": "The image shows the exterior side elevation of the property, which is consistent with the label."
+  },
+  "validation": {
+    "expected_label": "Subject RIGHT SIDE",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

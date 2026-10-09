@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p27_Photo_6.png",
+  "expected_label": "Bedroom (Not ANSI-Compliant)",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Bedroom (Not ANSI-Compliant)",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Attic bedroom with sloped ceilings",
+    "confidence": 0.98,
+    "reason": "The image shows a bedroom set up in an attic space. The presence of low, sloped ceilings indicates it is likely non-ANSI compliant due to height restrictions in those areas."
+  },
+  "validation": {
+    "expected_label": "Bedroom (Not ANSI-Compliant)",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

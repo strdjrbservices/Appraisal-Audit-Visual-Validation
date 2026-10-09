@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\1806_W_16th_St\\images\\p13_Addendum_Photo_3.png",
+  "expected_label": "Rear/Left Exterior",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Rear/Left Exterior",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Exterior brick wall of a house featuring a window, an HVAC unit, and a doorway, likely representing a side or rear elevation.",
+    "confidence": 0.95,
+    "reason": "The image shows the exterior elevation of a brick building, consistent with a rear or side perspective commonly found in residential appraisals."
+  },
+  "validation": {
+    "expected_label": "Rear/Left Exterior",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

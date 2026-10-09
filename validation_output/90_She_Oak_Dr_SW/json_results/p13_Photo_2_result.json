@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\90_She_Oak_Dr_SW\\images\\p13_Photo_2.png",
+  "expected_label": "Comparable 5",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 5",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Exterior view of a two-story residential building with a walkway leading to the entrance.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows the exterior of a residential building, which aligns with the 'Comparable 5' label indicating a property assessment context."
+  },
+  "validation": {
+    "expected_label": "Comparable 5",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

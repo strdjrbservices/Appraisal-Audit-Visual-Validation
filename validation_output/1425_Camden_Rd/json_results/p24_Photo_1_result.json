@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\1425_Camden_Rd\\images\\p24_Photo_1.png",
+  "expected_label": "Subject Front",
+  "paddleocr": {
+    "text": [
+      "一"
+    ],
+    "boxes": [
+      [
+        [
+          0.0,
+          260.0
+        ],
+        [
+          295.0,
+          178.0
+        ],
+        [
+          357.0,
+          422.0
+        ],
+        [
+          37.0,
+          488.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.60234
+    ],
+    "raw": {
+      "txts": [
+        "一"
+      ],
+      "scores": [
+        0.60234
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Front",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Exterior view of a brick building with windows and a doorway, showing the front facade.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows the front exterior of the building, aligning with the expected label."
+  },
+  "validation": {
+    "expected_label": "Subject Front",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

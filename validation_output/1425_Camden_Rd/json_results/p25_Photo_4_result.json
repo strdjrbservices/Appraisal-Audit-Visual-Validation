@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\1425_Camden_Rd\\images\\p25_Photo_4.png",
+  "expected_label": "Balcony",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Balcony",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A small balcony with a table and chair, a railing, and a brick wall.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a balcony with the described features."
+  },
+  "validation": {
+    "expected_label": "Balcony",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p24_Photo_6.png",
+  "expected_label": "Bathroom",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Bathroom",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A small bathroom interior with a sink, toilet, shower, and tiled walls.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a bathroom with standard fixtures and features."
+  },
+  "validation": {
+    "expected_label": "Bathroom",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

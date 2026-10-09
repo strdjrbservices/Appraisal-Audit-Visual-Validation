@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p26_Photo_2.png",
+  "expected_label": "Additional Rear View",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Additional Rear View",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Rear view of a house featuring a large wooden deck with a translucent cover and a lower level with wooden garage-style doors.",
+    "confidence": 1.0,
+    "reason": "The image clearly shows the rear exterior of a residential property."
+  },
+  "validation": {
+    "expected_label": "Additional Rear View",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

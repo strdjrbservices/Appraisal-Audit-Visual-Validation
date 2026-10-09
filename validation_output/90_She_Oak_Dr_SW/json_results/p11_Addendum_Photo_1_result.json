@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\90_She_Oak_Dr_SW\\images\\p11_Addendum_Photo_1.png",
+  "expected_label": "1/2 bath",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "1/2 bath",
+    "label_present": false,
+    "label_correct": false,
+    "observed_object": "Exterior view of a row of townhouses with front entrances.",
+    "confidence": 0.9,
+    "reason": "The image shows the exterior of residential buildings. There are no bathrooms visible, let alone half-baths."
+  },
+  "validation": {
+    "expected_label": "1/2 bath",
+    "ocr_label_match": false,
+    "gemma_label_correct": false,
+    "gemma_confidence": 0.9,
+    "status": "FAIL",
+    "reason": "Image evidence does not sufficiently support the expected label."
+  }
+}

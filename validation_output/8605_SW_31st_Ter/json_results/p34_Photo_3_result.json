@@ -1,0 +1,78 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p34_Photo_3.png",
+  "expected_label": "Subject Half Bathroom",
+  "paddleocr": {
+    "text": [
+      "MN",
+      "C"
+    ],
+    "boxes": [
+      [
+        [
+          33.0,
+          346.0
+        ],
+        [
+          432.0,
+          476.0
+        ],
+        [
+          322.0,
+          725.0
+        ],
+        [
+          0.0,
+          681.0
+        ]
+      ],
+      [
+        [
+          284.0,
+          363.0
+        ],
+        [
+          554.0,
+          368.0
+        ],
+        [
+          548.0,
+          723.0
+        ],
+        [
+          278.0,
+          718.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.59345,
+      0.5111
+    ],
+    "raw": {
+      "txts": [
+        "MN",
+        "C"
+      ],
+      "scores": [
+        0.59345,
+        0.5111
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Half Bathroom",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A small bathroom containing a toilet and a pedestal sink",
+    "confidence": 1.0,
+    "reason": "The image clearly shows a standard half bathroom configuration consisting of a toilet and a pedestal sink with no shower or bathtub present."
+  },
+  "validation": {
+    "expected_label": "Subject Half Bathroom",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

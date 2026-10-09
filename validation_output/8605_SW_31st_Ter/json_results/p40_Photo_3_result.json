@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p40_Photo_3.png",
+  "expected_label": "Subject Detector(s)",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Detector(s)",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "smoke detector mounted on the ceiling",
+    "confidence": 1.0,
+    "reason": "The image clearly shows a standard residential smoke detector installed on a white ceiling."
+  },
+  "validation": {
+    "expected_label": "Subject Detector(s)",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

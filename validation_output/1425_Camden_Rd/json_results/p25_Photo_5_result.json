@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\1425_Camden_Rd\\images\\p25_Photo_5.png",
+  "expected_label": "Garage",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Garage",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "The image shows a garage interior with a concrete floor, walls, and overhead storage racks. There are various items scattered around, including sports equipment, storage bins, and a trash can.",
+    "confidence": 0.98,
+    "reason": "The image clearly depicts a garage interior with the characteristic features like a concrete floor, walls, and storage racks."
+  },
+  "validation": {
+    "expected_label": "Garage",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

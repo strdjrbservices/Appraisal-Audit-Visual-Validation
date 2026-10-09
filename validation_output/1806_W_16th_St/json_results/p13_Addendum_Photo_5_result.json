@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\1806_W_16th_St\\images\\p13_Addendum_Photo_5.png",
+  "expected_label": "Living Room",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Living Room",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A living room area furnished with a sectional sofa, television, and media console.",
+    "confidence": 1.0,
+    "reason": "The image clearly displays common living room furniture and layout features."
+  },
+  "validation": {
+    "expected_label": "Living Room",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

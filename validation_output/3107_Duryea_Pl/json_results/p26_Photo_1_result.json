@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p26_Photo_1.png",
+  "expected_label": "Additional Front View",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Additional Front View",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Exterior view of a house, showcasing the side profile and a portion of the front facade",
+    "confidence": 0.95,
+    "reason": "The image provides a clear view of the home's exterior from a side-angled perspective that includes a significant portion of the front facade, making it a valid additional front view."
+  },
+  "validation": {
+    "expected_label": "Additional Front View",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

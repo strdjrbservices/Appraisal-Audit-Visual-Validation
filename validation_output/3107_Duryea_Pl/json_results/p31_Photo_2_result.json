@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p31_Photo_2.png",
+  "expected_label": "Comparable 2",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 2",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "front exterior view of a residential house",
+    "confidence": 0.98,
+    "reason": "The image clearly shows the front elevation of a detached single-family residence, which is consistent with typical comparable property documentation."
+  },
+  "validation": {
+    "expected_label": "Comparable 2",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

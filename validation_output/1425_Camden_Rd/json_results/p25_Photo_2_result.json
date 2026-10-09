@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\1425_Camden_Rd\\images\\p25_Photo_2.png",
+  "expected_label": "Entrance",
+  "paddleocr": {
+    "text": [
+      "FIRE"
+    ],
+    "boxes": [
+      [
+        [
+          239.0,
+          222.0
+        ],
+        [
+          312.0,
+          222.0
+        ],
+        [
+          312.0,
+          248.0
+        ],
+        [
+          239.0,
+          248.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.9996
+    ],
+    "raw": {
+      "txts": [
+        "FIRE"
+      ],
+      "scores": [
+        0.9996
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Entrance",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A street with a 'FIRE' marking and buildings on either side, appearing to be a street entrance.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a street, which is a common definition of an entrance to a property or neighborhood."
+  },
+  "validation": {
+    "expected_label": "Entrance",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

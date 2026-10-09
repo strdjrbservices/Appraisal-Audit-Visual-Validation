@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p31_Photo_3.png",
+  "expected_label": "Comparable 3",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 3",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "front exterior view of a single-story brick residential house",
+    "confidence": 1.0,
+    "reason": "The image clearly shows a residential property front exterior, which is appropriate for a comparable sale property in an appraisal report."
+  },
+  "validation": {
+    "expected_label": "Comparable 3",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

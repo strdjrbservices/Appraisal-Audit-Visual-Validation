@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p13_Photo_1.png",
+  "expected_label": "Comparable 7",
+  "paddleocr": {
+    "text": [
+      "Sold"
+    ],
+    "boxes": [
+      [
+        [
+          77.0,
+          361.0
+        ],
+        [
+          107.0,
+          361.0
+        ],
+        [
+          107.0,
+          375.0
+        ],
+        [
+          77.0,
+          375.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.99979
+    ],
+    "raw": {
+      "txts": [
+        "Sold"
+      ],
+      "scores": [
+        0.99979
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 7",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A front exterior view of a new residential house, consistent with a comparable property.",
+    "confidence": 1.0,
+    "reason": "The image clearly shows a residential property that would be used as a real estate comparable."
+  },
+  "validation": {
+    "expected_label": "Comparable 7",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

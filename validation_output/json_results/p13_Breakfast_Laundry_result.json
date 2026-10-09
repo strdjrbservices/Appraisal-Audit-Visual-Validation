@@ -1,0 +1,78 @@
+{
+  "image_path": "validation_output\\images\\p13_Breakfast_Laundry.png",
+  "expected_label": "Breakfast/Laundry Area",
+  "paddleocr": {
+    "text": [
+      "Auurtlonal View",
+      "Breakfast/Laundry"
+    ],
+    "boxes": [
+      [
+        [
+          58.0,
+          0.0
+        ],
+        [
+          259.0,
+          0.0
+        ],
+        [
+          259.0,
+          12.0
+        ],
+        [
+          58.0,
+          12.0
+        ]
+      ],
+      [
+        [
+          41.0,
+          380.0
+        ],
+        [
+          279.0,
+          380.0
+        ],
+        [
+          279.0,
+          403.0
+        ],
+        [
+          41.0,
+          403.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.76082,
+      0.99364
+    ],
+    "raw": {
+      "txts": [
+        "Auurtlonal View",
+        "Breakfast/Laundry"
+      ],
+      "scores": [
+        0.76082,
+        0.99364
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Breakfast/Laundry Area",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A small room containing a laundry appliance in a closet and general living space furniture",
+    "confidence": 0.95,
+    "reason": "The image clearly shows laundry equipment in a closet space, confirming the laundry functionality of the room."
+  },
+  "validation": {
+    "expected_label": "Breakfast/Laundry Area",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\images\\p13_Front_Right_Exterior.png",
+  "expected_label": "Front/Right Exterior",
+  "paddleocr": {
+    "text": [
+      "Front/Right Exterior"
+    ],
+    "boxes": [
+      [
+        [
+          78.0,
+          368.0
+        ],
+        [
+          335.0,
+          369.0
+        ],
+        [
+          335.0,
+          389.0
+        ],
+        [
+          78.0,
+          389.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.92865
+    ],
+    "raw": {
+      "txts": [
+        "Front/Right Exterior"
+      ],
+      "scores": [
+        0.92865
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Front/Right Exterior",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A front porch and side exterior wall of a residential house.",
+    "confidence": 0.95,
+    "reason": "The image clearly shows the front porch area and the transition to the right side of the exterior structure."
+  },
+  "validation": {
+    "expected_label": "Front/Right Exterior",
+    "ocr_label_match": true,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

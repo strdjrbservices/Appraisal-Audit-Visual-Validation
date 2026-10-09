@@ -1,0 +1,78 @@
+{
+  "image_path": "validation_output\\90_She_Oak_Dr_SW\\images\\p12_Photo_1.png",
+  "expected_label": "Comparable 1",
+  "paddleocr": {
+    "text": [
+      "11",
+      "1f"
+    ],
+    "boxes": [
+      [
+        [
+          107.0,
+          419.0
+        ],
+        [
+          121.0,
+          419.0
+        ],
+        [
+          121.0,
+          432.0
+        ],
+        [
+          107.0,
+          432.0
+        ]
+      ],
+      [
+        [
+          328.0,
+          427.0
+        ],
+        [
+          346.0,
+          427.0
+        ],
+        [
+          346.0,
+          445.0
+        ],
+        [
+          328.0,
+          445.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.8912,
+      0.69477
+    ],
+    "raw": {
+      "txts": [
+        "11",
+        "1f"
+      ],
+      "scores": [
+        0.8912,
+        0.69477
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 1",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Exterior view of a two-story townhouse with a garage, landscaping, and a 'For Sale' sign.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a residential property, consistent with the label 'Comparable 1' which typically represents a similar property used for comparison in an appraisal."
+  },
+  "validation": {
+    "expected_label": "Comparable 1",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

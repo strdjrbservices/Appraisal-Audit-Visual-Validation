@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\90_She_Oak_Dr_SW\\images\\p11_Addendum_Photo_14.png",
+  "expected_label": "Photo Addendum Slot 14",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Photo Addendum Slot 14",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A smoke detector mounted on a wall.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a smoke detector, which aligns with the expected label 'Photo Addendum Slot 14'."
+  },
+  "validation": {
+    "expected_label": "Photo Addendum Slot 14",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

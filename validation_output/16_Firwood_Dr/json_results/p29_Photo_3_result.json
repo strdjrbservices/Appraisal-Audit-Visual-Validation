@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p29_Photo_3.png",
+  "expected_label": "Comparable 6",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 6",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Exterior view of a two-story house with a driveway, manicured lawn, and landscaping.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows an exterior shot of a residential property, consistent with the 'Comparable 6' label which typically represents a property image for appraisal purposes."
+  },
+  "validation": {
+    "expected_label": "Comparable 6",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

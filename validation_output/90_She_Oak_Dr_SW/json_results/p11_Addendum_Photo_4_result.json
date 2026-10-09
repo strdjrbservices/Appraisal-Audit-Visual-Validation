@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\90_She_Oak_Dr_SW\\images\\p11_Addendum_Photo_4.png",
+  "expected_label": "Bedroom",
+  "paddleocr": {
+    "text": [
+      "工"
+    ],
+    "boxes": [
+      [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          245.0,
+          0.0
+        ],
+        [
+          250.0,
+          351.0
+        ],
+        [
+          0.0,
+          351.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.89727
+    ],
+    "raw": {
+      "txts": [
+        "工"
+      ],
+      "scores": [
+        0.89727
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Bedroom",
+    "label_present": true,
+    "label_correct": false,
+    "observed_object": "Garage interior with a partially open garage door, concrete floor, and drywall walls.",
+    "confidence": 0.85,
+    "reason": "The image depicts a garage interior, not a bedroom."
+  },
+  "validation": {
+    "expected_label": "Bedroom",
+    "ocr_label_match": false,
+    "gemma_label_correct": false,
+    "gemma_confidence": 0.85,
+    "status": "FAIL",
+    "reason": "Image evidence does not sufficiently support the expected label."
+  }
+}

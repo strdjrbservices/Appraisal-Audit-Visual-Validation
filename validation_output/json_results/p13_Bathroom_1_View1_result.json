@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\images\\p13_Bathroom_1_View1.png",
+  "expected_label": "Bathroom 1",
+  "paddleocr": {
+    "text": [
+      "Bathroom 1"
+    ],
+    "boxes": [
+      [
+        [
+          82.0,
+          376.0
+        ],
+        [
+          234.0,
+          376.0
+        ],
+        [
+          234.0,
+          402.0
+        ],
+        [
+          82.0,
+          402.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.99721
+    ],
+    "raw": {
+      "txts": [
+        "Bathroom 1"
+      ],
+      "scores": [
+        0.99721
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Bathroom 1",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "bathroom vanity with sink, mirror, and tile flooring",
+    "confidence": 1.0,
+    "reason": "The image clearly shows a standard bathroom vanity area, consistent with the label Bathroom 1."
+  },
+  "validation": {
+    "expected_label": "Bathroom 1",
+    "ocr_label_match": true,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

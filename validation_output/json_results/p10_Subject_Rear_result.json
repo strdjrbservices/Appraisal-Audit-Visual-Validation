@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\images\\p10_Subject_Rear.png",
+  "expected_label": "Subject Rear (1806 W 16th St)",
+  "paddleocr": {
+    "text": [
+      "Subject Street"
+    ],
+    "boxes": [
+      [
+        [
+          1077.0,
+          476.0
+        ],
+        [
+          1277.0,
+          476.0
+        ],
+        [
+          1277.0,
+          517.0
+        ],
+        [
+          1077.0,
+          517.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.99994
+    ],
+    "raw": {
+      "txts": [
+        "Subject Street"
+      ],
+      "scores": [
+        0.99994
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Rear (1806 W 16th St)",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "The upper image displays the rear exterior of a single-story brick residential building with a patio, HVAC unit, and rear entrance.",
+    "confidence": 0.98,
+    "reason": "The image shows the back of a house, consistent with a 'Subject Rear' view."
+  },
+  "validation": {
+    "expected_label": "Subject Rear (1806 W 16th St)",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "image_path": "validation_output\\1806_W_16th_St\\images\\p23_Photo_1.png",
+  "expected_label": "Proximity to Subject",
+  "paddleocr": {
+    "text": [
+      "Lender/Client",
+      "BPL Mortgage, LLC"
+    ],
+    "boxes": [
+      [
+        [
+          26.0,
+          0.0
+        ],
+        [
+          134.0,
+          0.0
+        ],
+        [
+          134.0,
+          19.0
+        ],
+        [
+          26.0,
+          19.0
+        ]
+      ],
+      [
+        [
+          127.0,
+          0.0
+        ],
+        [
+          364.0,
+          0.0
+        ],
+        [
+          364.0,
+          19.0
+        ],
+        [
+          127.0,
+          19.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.99893,
+      0.99101
+    ],
+    "raw": {
+      "txts": [
+        "Lender/Client",
+        "BPL Mortgage, LLC"
+      ],
+      "scores": [
+        0.99893,
+        0.99101
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Proximity to Subject",
+    "label_present": true,
+    "label_correct": false,
+    "observed_object": "Front exterior view of a residential house",
+    "confidence": 0.98,
+    "reason": "The image clearly shows the front elevation of the subject property, not a view showing the proximity to neighboring properties."
+  },
+  "validation": {
+    "expected_label": "Proximity to Subject",
+    "ocr_label_match": false,
+    "gemma_label_correct": false,
+    "gemma_confidence": 0.98,
+    "status": "FAIL",
+    "reason": "Image evidence does not sufficiently support the expected label."
+  }
+}

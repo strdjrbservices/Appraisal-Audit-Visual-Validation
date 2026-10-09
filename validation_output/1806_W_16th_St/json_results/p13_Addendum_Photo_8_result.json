@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\1806_W_16th_St\\images\\p13_Addendum_Photo_8.png",
+  "expected_label": "Additional View",
+  "paddleocr": {
+    "text": [
+      "27"
+    ],
+    "boxes": [
+      [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          381.0,
+          0.0
+        ],
+        [
+          381.0,
+          293.0
+        ],
+        [
+          0.0,
+          293.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.56618
+    ],
+    "raw": {
+      "txts": [
+        "27"
+      ],
+      "scores": [
+        0.56618
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Additional View",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "kitchen area including cabinetry, appliances, and sink",
+    "confidence": 0.95,
+    "reason": "The image clearly shows a kitchen interior. 'Additional View' is a valid label for any non-primary or supplementary photo of an interior room."
+  },
+  "validation": {
+    "expected_label": "Additional View",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p23_Photo_2.png",
+  "expected_label": "Family Room",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Family Room",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A room with hardwood flooring, light beige walls, and a white baseboard. It appears to be a living room or family room.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a room with hardwood floors, which is consistent with a family room or living room setting."
+  },
+  "validation": {
+    "expected_label": "Family Room",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

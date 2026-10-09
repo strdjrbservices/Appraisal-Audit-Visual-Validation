@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p13_Photo_2.png",
+  "expected_label": "Comparable 8",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 8",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A residential construction site or vacant lot preparing for a foundation",
+    "confidence": 0.9,
+    "reason": "The image shows an empty plot of land with foundation preparation, which is typical for a comparable property in a new development phase."
+  },
+  "validation": {
+    "expected_label": "Comparable 8",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.9,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p25_Photo_3.png",
+  "expected_label": "Subject Street",
+  "paddleocr": {
+    "text": [
+      "G三"
+    ],
+    "boxes": [
+      [
+        [
+          739.0,
+          445.0
+        ],
+        [
+          785.0,
+          439.0
+        ],
+        [
+          789.0,
+          469.0
+        ],
+        [
+          742.0,
+          475.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.5197
+    ],
+    "raw": {
+      "txts": [
+        "G三"
+      ],
+      "scores": [
+        0.5197
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Street",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A residential street scene featuring a car parked on pavement next to trash bins and a retaining wall",
+    "confidence": 0.95,
+    "reason": "The image clearly shows a paved road and surrounding residential landscaping typical of a subject street view."
+  },
+  "validation": {
+    "expected_label": "Subject Street",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

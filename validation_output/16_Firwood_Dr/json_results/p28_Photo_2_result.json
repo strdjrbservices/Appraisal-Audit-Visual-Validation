@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p28_Photo_2.png",
+  "expected_label": "Comparable 2",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 2",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Exterior view of a two-story white house with a brick driveway and a large green lawn. The house has a garage and mature trees in the background.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows an exterior view of a residential property, consistent with the 'Comparable 2' label which typically represents exterior property views."
+  },
+  "validation": {
+    "expected_label": "Comparable 2",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

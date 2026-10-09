@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\90_She_Oak_Dr_SW\\images\\p11_Addendum_Photo_6.png",
+  "expected_label": "Bedroom",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Bedroom",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "An empty living room with a large window, ceiling fan, and doorway.",
+    "confidence": 0.98,
+    "reason": "The image depicts a spacious, empty room with features commonly found in a bedroom, such as a window and ceiling fan. The overall layout and size suggest it's a living room or bedroom."
+  },
+  "validation": {
+    "expected_label": "Bedroom",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

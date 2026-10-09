@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\90_She_Oak_Dr_SW\\images\\p11_Addendum_Photo_3.png",
+  "expected_label": "Kitchen",
+  "paddleocr": {
+    "text": [
+      "Out"
+    ],
+    "boxes": [
+      [
+        [
+          17.0,
+          223.0
+        ],
+        [
+          39.0,
+          225.0
+        ],
+        [
+          38.0,
+          238.0
+        ],
+        [
+          15.0,
+          236.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.99967
+    ],
+    "raw": {
+      "txts": [
+        "Out"
+      ],
+      "scores": [
+        0.99967
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Kitchen",
+    "label_present": false,
+    "label_correct": false,
+    "observed_object": "Exterior view of a residential street with houses and parked vehicles.",
+    "confidence": 0.8,
+    "reason": "The image shows an exterior view of a neighborhood, not a kitchen."
+  },
+  "validation": {
+    "expected_label": "Kitchen",
+    "ocr_label_match": false,
+    "gemma_label_correct": false,
+    "gemma_confidence": 0.8,
+    "status": "FAIL",
+    "reason": "Image evidence does not sufficiently support the expected label."
+  }
+}

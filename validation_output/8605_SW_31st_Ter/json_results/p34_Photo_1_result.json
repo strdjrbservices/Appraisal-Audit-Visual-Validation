@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p34_Photo_1.png",
+  "expected_label": "Subject Kitchen Opp View",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Kitchen Opp View",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A kitchen featuring white cabinets, a gas stove, and a kitchen island with a sink.",
+    "confidence": 0.98,
+    "reason": "The image shows a standard kitchen layout, which matches the expected label of a kitchen view."
+  },
+  "validation": {
+    "expected_label": "Subject Kitchen Opp View",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

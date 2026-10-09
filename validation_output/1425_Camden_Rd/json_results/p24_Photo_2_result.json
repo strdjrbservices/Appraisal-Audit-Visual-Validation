@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\1425_Camden_Rd\\images\\p24_Photo_2.png",
+  "expected_label": "Subject Rear",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Rear",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Exterior view of a brick townhouse with balconies and windows, taken from the rear.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows the rear exterior of the townhouse, consistent with the expected label."
+  },
+  "validation": {
+    "expected_label": "Subject Rear",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

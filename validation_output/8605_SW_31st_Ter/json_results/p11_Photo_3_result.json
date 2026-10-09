@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p11_Photo_3.png",
+  "expected_label": "Comparable 6",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 6",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "front exterior of a single-family residence",
+    "confidence": 1.0,
+    "reason": "The image clearly shows the front exterior of a house, which is consistent with its use as a comparable property in an appraisal context."
+  },
+  "validation": {
+    "expected_label": "Comparable 6",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

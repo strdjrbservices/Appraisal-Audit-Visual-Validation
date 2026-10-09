@@ -1,0 +1,78 @@
+{
+  "image_path": "validation_output\\1425_Camden_Rd\\images\\p29_Photo_3.png",
+  "expected_label": "Comparable3",
+  "paddleocr": {
+    "text": [
+      "3643",
+      "1990"
+    ],
+    "boxes": [
+      [
+        [
+          301.0,
+          345.0
+        ],
+        [
+          323.0,
+          345.0
+        ],
+        [
+          323.0,
+          357.0
+        ],
+        [
+          301.0,
+          357.0
+        ]
+      ],
+      [
+        [
+          524.0,
+          347.0
+        ],
+        [
+          545.0,
+          347.0
+        ],
+        [
+          545.0,
+          357.0
+        ],
+        [
+          524.0,
+          357.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.81372,
+      0.62687
+    ],
+    "raw": {
+      "txts": [
+        "3643",
+        "1990"
+      ],
+      "scores": [
+        0.81372,
+        0.62687
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable3",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A row of three modern townhouses with similar architectural features, including large windows and orange accent details.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a series of residential buildings, consistent with the 'Comparable3' label which typically represents exterior views of residential properties."
+  },
+  "validation": {
+    "expected_label": "Comparable3",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p20_Photo_2.png",
+  "expected_label": "Prox. to Subject",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Prox. to Subject",
+    "label_present": true,
+    "label_correct": false,
+    "observed_object": "Front exterior view of the subject property",
+    "confidence": 0.95,
+    "reason": "The image shows the front exterior of the actual subject property, not a neighboring property indicating proximity."
+  },
+  "validation": {
+    "expected_label": "Prox. to Subject",
+    "ocr_label_match": false,
+    "gemma_label_correct": false,
+    "gemma_confidence": 0.95,
+    "status": "FAIL",
+    "reason": "Image evidence does not sufficiently support the expected label."
+  }
+}

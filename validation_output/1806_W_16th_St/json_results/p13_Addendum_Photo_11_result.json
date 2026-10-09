@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\1806_W_16th_St\\images\\p13_Addendum_Photo_11.png",
+  "expected_label": "Bedroom 1",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Bedroom 1",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A bedroom containing a bed, nightstand, and door",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a furnished bedroom with a bed and bedroom furniture, which matches the expected label."
+  },
+  "validation": {
+    "expected_label": "Bedroom 1",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

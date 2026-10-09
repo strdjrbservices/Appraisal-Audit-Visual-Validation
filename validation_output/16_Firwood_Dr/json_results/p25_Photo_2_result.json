@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p25_Photo_2.png",
+  "expected_label": "ADU Kitchen",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "ADU Kitchen",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A small, white-colored kitchen interior with appliances including a refrigerator, stove, sink, and microwave. The cabinets and countertops are white, and the walls are a light brown.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a kitchen interior, consistent with the expected label of an ADU kitchen."
+  },
+  "validation": {
+    "expected_label": "ADU Kitchen",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

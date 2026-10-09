@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\1806_W_16th_St\\images\\p10_Photo_2.png",
+  "expected_label": "Subject Rear",
+  "paddleocr": {
+    "text": [
+      "西"
+    ],
+    "boxes": [
+      [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          634.0,
+          0.0
+        ],
+        [
+          634.0,
+          489.0
+        ],
+        [
+          0.0,
+          489.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.66355
+    ],
+    "raw": {
+      "txts": [
+        "西"
+      ],
+      "scores": [
+        0.66355
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Rear",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Rear exterior view of a brick house with a concrete patio, HVAC unit, and a storm door.",
+    "confidence": 0.98,
+    "reason": "The image shows the back of a residential structure, consistent with a rear exterior appraisal view."
+  },
+  "validation": {
+    "expected_label": "Subject Rear",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

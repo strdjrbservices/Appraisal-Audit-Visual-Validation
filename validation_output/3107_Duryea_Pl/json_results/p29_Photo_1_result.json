@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p29_Photo_1.png",
+  "expected_label": "Additional Bathroom (Basement)",
+  "paddleocr": {
+    "text": [
+      "酒"
+    ],
+    "boxes": [
+      [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          460.0,
+          0.0
+        ],
+        [
+          460.0,
+          596.0
+        ],
+        [
+          0.0,
+          596.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.94229
+    ],
+    "raw": {
+      "txts": [
+        "酒"
+      ],
+      "scores": [
+        0.94229
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Additional Bathroom (Basement)",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A tiled bathroom shower stall with a glass door, showerhead, and toilet paper holder visible nearby.",
+    "confidence": 0.85,
+    "reason": "The image shows a full bathroom setup including a shower stall. While basement status cannot be confirmed visually from the image itself, the feature shown is clearly a bathroom."
+  },
+  "validation": {
+    "expected_label": "Additional Bathroom (Basement)",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.85,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

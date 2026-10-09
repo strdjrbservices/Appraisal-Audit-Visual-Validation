@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\1806_W_16th_St\\images\\p13_Addendum_Photo_6.png",
+  "expected_label": "Additional View",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Additional View",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Living room with leather sectional sofa",
+    "confidence": 0.95,
+    "reason": "The image shows a living room area which is a standard interior space that can be classified as an additional view."
+  },
+  "validation": {
+    "expected_label": "Additional View",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

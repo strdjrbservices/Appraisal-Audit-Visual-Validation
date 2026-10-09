@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p16_Photo_4.png",
+  "expected_label": "Bathroom View#1",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Bathroom View#1",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A tiled walk-in shower with green marble-look wall tiles and hexagon floor tiles.",
+    "confidence": 1.0,
+    "reason": "The image clearly shows a shower stall, which is a key component of a bathroom."
+  },
+  "validation": {
+    "expected_label": "Bathroom View#1",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

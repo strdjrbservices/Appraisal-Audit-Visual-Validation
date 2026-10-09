@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p15_Photo_2.png",
+  "expected_label": "Living Room",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Living Room",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "An empty living room area with hardwood floors, a white exterior door, a large window, and a single folding chair.",
+    "confidence": 0.95,
+    "reason": "The space is consistent with a primary living area in a residential home, featuring a typical layout and finishes for such a room."
+  },
+  "validation": {
+    "expected_label": "Living Room",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

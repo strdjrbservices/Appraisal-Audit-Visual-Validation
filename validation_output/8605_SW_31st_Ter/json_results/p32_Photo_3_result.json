@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p32_Photo_3.png",
+  "expected_label": "Subject Side",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Side",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Side exterior view of a house including siding, a back porch entrance, and HVAC unit.",
+    "confidence": 1.0,
+    "reason": "The image clearly shows the side elevation of the property, which is consistent with the label Subject Side."
+  },
+  "validation": {
+    "expected_label": "Subject Side",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

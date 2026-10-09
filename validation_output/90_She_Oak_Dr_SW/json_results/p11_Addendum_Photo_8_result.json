@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\90_She_Oak_Dr_SW\\images\\p11_Addendum_Photo_8.png",
+  "expected_label": "Bath",
+  "paddleocr": {
+    "text": [
+      "H"
+    ],
+    "boxes": [
+      [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          459.0,
+          0.0
+        ],
+        [
+          459.0,
+          351.0
+        ],
+        [
+          0.0,
+          351.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.60208
+    ],
+    "raw": {
+      "txts": [
+        "H"
+      ],
+      "scores": [
+        0.60208
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Bath",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A small, empty bedroom with a window, light wood flooring, and a door.",
+    "confidence": 0.98,
+    "reason": "The image depicts a small room that is consistent with a bathroom (bath) based on the window and door."
+  },
+  "validation": {
+    "expected_label": "Bath",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

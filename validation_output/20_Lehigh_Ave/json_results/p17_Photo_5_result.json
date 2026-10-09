@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p17_Photo_5.png",
+  "expected_label": "Cac",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Cac",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Two residential central air conditioning condenser units located outside a house.",
+    "confidence": 1.0,
+    "reason": "The image clearly shows two exterior HVAC central air conditioning units, which aligns with the 'Cac' label."
+  },
+  "validation": {
+    "expected_label": "Cac",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p28_Photo_2.png",
+  "expected_label": "Additional Bathroom",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Additional Bathroom",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A residential bathroom featuring a freestanding tub, toilet, and sink.",
+    "confidence": 1.0,
+    "reason": "The image clearly displays standard bathroom fixtures including a toilet and a bathtub."
+  },
+  "validation": {
+    "expected_label": "Additional Bathroom",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

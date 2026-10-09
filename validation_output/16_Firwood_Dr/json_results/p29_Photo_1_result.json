@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p29_Photo_1.png",
+  "expected_label": "Comparable 4",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 4",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Exterior view of a two-story suburban house with a manicured lawn, landscaping, and a blue sky background.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows an exterior shot of a residential house, aligning with the 'Comparable 4' label which typically represents exterior property views."
+  },
+  "validation": {
+    "expected_label": "Comparable 4",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

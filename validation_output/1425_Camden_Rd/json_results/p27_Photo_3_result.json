@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\1425_Camden_Rd\\images\\p27_Photo_3.png",
+  "expected_label": "Living",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Living",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A modern living room with a sectional sofa, coffee table, TV stand, and large windows with a view.",
+    "confidence": 0.98,
+    "reason": "The image clearly depicts a living room with furniture and a view, aligning with the expected label."
+  },
+  "validation": {
+    "expected_label": "Living",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

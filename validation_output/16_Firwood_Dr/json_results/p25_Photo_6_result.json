@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p25_Photo_6.png",
+  "expected_label": "Uncovered Porch",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Uncovered Porch",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A brick-paved outdoor area adjacent to a brick building, featuring a rocking chair, potted plants, and a decorative mat.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows an outdoor covered area with a brick surface, a rocking chair, and other outdoor elements, consistent with the definition of an uncovered porch."
+  },
+  "validation": {
+    "expected_label": "Uncovered Porch",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

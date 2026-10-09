@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p28_Photo_3.png",
+  "expected_label": "Comparable 3",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 3",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A two-story house with a brick facade, stone accents, and a manicured lawn. The house has a garage and appears to be a residential property.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a residential house exterior, which aligns with the 'Comparable 3' label indicating a property assessment context."
+  },
+  "validation": {
+    "expected_label": "Comparable 3",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

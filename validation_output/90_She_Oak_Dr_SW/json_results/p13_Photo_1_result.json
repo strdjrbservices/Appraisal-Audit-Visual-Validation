@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\90_She_Oak_Dr_SW\\images\\p13_Photo_1.png",
+  "expected_label": "Comparable 4",
+  "paddleocr": {
+    "text": [
+      "M"
+    ],
+    "boxes": [
+      [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          689.0,
+          0.0
+        ],
+        [
+          689.0,
+          476.0
+        ],
+        [
+          0.0,
+          476.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.50053
+    ],
+    "raw": {
+      "txts": [
+        "M"
+      ],
+      "scores": [
+        0.50053
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 4",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Exterior shot of a two-story house with a garage, a paved driveway, and a lawn.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows an exterior view of a residential property, consistent with the label 'Comparable 4'."
+  },
+  "validation": {
+    "expected_label": "Comparable 4",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

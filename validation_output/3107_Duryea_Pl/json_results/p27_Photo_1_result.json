@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p27_Photo_1.png",
+  "expected_label": "Dining Room",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Dining Room",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A dining area with a round table, corner bench seating, chairs, a china cabinet, and a chandelier.",
+    "confidence": 1.0,
+    "reason": "The image features furniture and fixtures characteristic of a dining room or dining nook."
+  },
+  "validation": {
+    "expected_label": "Dining Room",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

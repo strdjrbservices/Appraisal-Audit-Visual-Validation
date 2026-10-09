@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p09_Photo_3.png",
+  "expected_label": "Comparable 3",
+  "paddleocr": {
+    "text": [
+      "0 PP"
+    ],
+    "boxes": [
+      [
+        [
+          240.0,
+          376.0
+        ],
+        [
+          280.0,
+          376.0
+        ],
+        [
+          280.0,
+          397.0
+        ],
+        [
+          240.0,
+          397.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.63737
+    ],
+    "raw": {
+      "txts": [
+        "0 PP"
+      ],
+      "scores": [
+        0.63737
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 3",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "front exterior of a two-story residential house",
+    "confidence": 0.75,
+    "reason": "The image shows the front exterior of a home, which is consistent with a comparable property photo in an appraisal report."
+  },
+  "validation": {
+    "expected_label": "Comparable 3",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.75,
+    "status": "FAIL",
+    "reason": "Image evidence does not sufficiently support the expected label."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p35_Photo_3.png",
+  "expected_label": "Subject Bedroom",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Bedroom",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "An empty bedroom with carpeted flooring, gray walls, a window, and a ceiling light fixture.",
+    "confidence": 0.99,
+    "reason": "The image clearly shows a standard residential bedroom interior."
+  },
+  "validation": {
+    "expected_label": "Subject Bedroom",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.99,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

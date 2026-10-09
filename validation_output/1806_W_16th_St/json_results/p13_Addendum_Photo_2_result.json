@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\1806_W_16th_St\\images\\p13_Addendum_Photo_2.png",
+  "expected_label": "Front/Right Exterior",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Front/Right Exterior",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Covered porch and side exterior wall of a residential home",
+    "confidence": 0.95,
+    "reason": "The image shows a covered porch area and the side wall of the building, which corresponds to a front/side exterior view."
+  },
+  "validation": {
+    "expected_label": "Front/Right Exterior",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "image_path": "validation_output\\images\\p11_Comparable_3.png",
+  "expected_label": "Comparable 3 (1223 W 10th St)",
+  "paddleocr": {
+    "text": [
+      "Age",
+      "111",
+      "Form PICPIX.CR - \"TOTAL\" appraisal software by a la mode, inc. - 1-800-ALAMODE"
+    ],
+    "boxes": [
+      [
+        [
+          962.0,
+          0.0
+        ],
+        [
+          998.0,
+          0.0
+        ],
+        [
+          998.0,
+          25.0
+        ],
+        [
+          962.0,
+          25.0
+        ]
+      ],
+      [
+        [
+          1117.0,
+          0.0
+        ],
+        [
+          1156.0,
+          0.0
+        ],
+        [
+          1156.0,
+          21.0
+        ],
+        [
+          1117.0,
+          21.0
+        ]
+      ],
+      [
+        [
+          490.0,
+          333.0
+        ],
+        [
+          1059.0,
+          334.0
+        ],
+        [
+          1059.0,
+          360.0
+        ],
+        [
+          490.0,
+          360.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.99984,
+      0.99997,
+      0.99195
+    ],
+    "raw": {
+      "txts": [
+        "Age",
+        "111",
+        "Form PICPIX.CR - \"TOTAL\" appraisal software by a la mode, inc. - 1-800-ALAMODE"
+      ],
+      "scores": [
+        0.99984,
+        0.99997,
+        0.99195
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 3 (1223 W 10th St)",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Exterior front view of a residential property",
+    "confidence": 0.95,
+    "reason": "The image shows the exterior of a home, consistent with a comparable property photo used in an appraisal report."
+  },
+  "validation": {
+    "expected_label": "Comparable 3 (1223 W 10th St)",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

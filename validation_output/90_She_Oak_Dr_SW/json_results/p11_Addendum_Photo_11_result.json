@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\90_She_Oak_Dr_SW\\images\\p11_Addendum_Photo_11.png",
+  "expected_label": "Photo Addendum Slot 11",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Photo Addendum Slot 11",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A room with a window, light wood flooring, and painted walls. It appears to be a blank room, likely intended for staging or photography.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a room, and the label 'Photo Addendum Slot 11' is a suitable description of a supplemental image within an appraisal context."
+  },
+  "validation": {
+    "expected_label": "Photo Addendum Slot 11",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

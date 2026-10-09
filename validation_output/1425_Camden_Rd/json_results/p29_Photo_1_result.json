@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\1425_Camden_Rd\\images\\p29_Photo_1.png",
+  "expected_label": "Prox. to Subject",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Prox. to Subject",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Exterior view of a two-story house with brick and green siding, surrounded by greenery.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows the exterior of a house, which aligns with the 'Prox. to Subject' label indicating a close view of the property."
+  },
+  "validation": {
+    "expected_label": "Prox. to Subject",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

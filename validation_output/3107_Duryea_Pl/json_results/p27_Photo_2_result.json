@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p27_Photo_2.png",
+  "expected_label": "Kitchen",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Kitchen",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A residential kitchen featuring cabinetry, a central island with a granite countertop, a refrigerator, a stove, a sink, and a hanging pot rack.",
+    "confidence": 1.0,
+    "reason": "The image clearly depicts a functional kitchen space with typical appliances and kitchen fixtures."
+  },
+  "validation": {
+    "expected_label": "Kitchen",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p02_Photo_1.png",
+  "expected_label": "APPRAISAL OF REAL PROPERTY",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "APPRAISAL OF REAL PROPERTY",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "front exterior of a two-story residential house",
+    "confidence": 0.95,
+    "reason": "The image shows the exterior of a residential home, which is the subject of a real property appraisal."
+  },
+  "validation": {
+    "expected_label": "APPRAISAL OF REAL PROPERTY",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

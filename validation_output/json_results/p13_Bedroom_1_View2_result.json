@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\images\\p13_Bedroom_1_View2.png",
+  "expected_label": "Bedroom 1 Additional View",
+  "paddleocr": {
+    "text": [
+      "Bedroom 1"
+    ],
+    "boxes": [
+      [
+        [
+          86.0,
+          368.0
+        ],
+        [
+          229.0,
+          368.0
+        ],
+        [
+          229.0,
+          388.0
+        ],
+        [
+          86.0,
+          388.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.92241
+    ],
+    "raw": {
+      "txts": [
+        "Bedroom 1"
+      ],
+      "scores": [
+        0.92241
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Bedroom 1 Additional View",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A bedroom containing a bed, wall-mounted television, and a gaming chair.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows the interior of a bedroom with furnishings consistent with the provided label."
+  },
+  "validation": {
+    "expected_label": "Bedroom 1 Additional View",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

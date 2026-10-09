@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\1425_Camden_Rd\\images\\p27_Photo_5.png",
+  "expected_label": "Half bath",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Half bath",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A small bathroom with a sink, toilet, and black tile floor.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a small bathroom with a toilet and sink, consistent with a 'half bath' or powder room."
+  },
+  "validation": {
+    "expected_label": "Half bath",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

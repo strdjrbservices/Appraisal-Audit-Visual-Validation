@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p35_Photo_2.png",
+  "expected_label": "Subject Staircase",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Staircase",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Carpeted interior residential staircase",
+    "confidence": 1.0,
+    "reason": "The image clearly shows an interior staircase with carpeted steps and a wall-mounted handrail."
+  },
+  "validation": {
+    "expected_label": "Subject Staircase",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

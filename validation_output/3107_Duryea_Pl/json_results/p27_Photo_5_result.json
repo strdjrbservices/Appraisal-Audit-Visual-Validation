@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p27_Photo_5.png",
+  "expected_label": "Bedroom",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Bedroom",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A bedroom containing a bunk bed and a small play area",
+    "confidence": 1.0,
+    "reason": "The image clearly shows a bedroom with a bunk bed, child-themed rug, and furniture."
+  },
+  "validation": {
+    "expected_label": "Bedroom",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

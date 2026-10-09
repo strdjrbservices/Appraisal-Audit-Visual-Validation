@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p33_Photo_3.png",
+  "expected_label": "Subject Kitchen",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Kitchen",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A modern kitchen with an island, cabinets, stove, and sink",
+    "confidence": 1.0,
+    "reason": "The image clearly shows a residential kitchen featuring a kitchen island with a sink, cabinetry, and kitchen appliances."
+  },
+  "validation": {
+    "expected_label": "Subject Kitchen",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p29_Photo_1.png",
+  "expected_label": "45000046749",
+  "paddleocr": {
+    "text": [
+      "fam Becd",
+      "ER:",
+      "nes Becker",
+      "ation #: 45000046749",
+      "se #:"
+    ],
+    "boxes": [
+      [
+        [
+          51.0,
+          19.0
+        ],
+        [
+          373.0,
+          14.0
+        ],
+        [
+          375.0,
+          173.0
+        ],
+        [
+          53.0,
+          177.0
+        ]
+      ],
+      [
+        [
+          0.0,
+          50.0
+        ],
+        [
+          35.0,
+          50.0
+        ],
+        [
+          35.0,
+          74.0
+        ],
+        [
+          0.0,
+          74.0
+        ]
+      ],
+      [
+        [
+          0.0,
+          187.0
+        ],
+        [
+          109.0,
+          189.0
+        ],
+        [
+          109.0,
+          213.0
+        ],
+        [
+          0.0,
+          211.0
+        ]
+      ],
+      [
+        [
+          0.0,
+          240.0
+        ],
+        [
+          210.0,
+          243.0
+        ],
+        [
+          209.0,
+          272.0
+        ],
+        [
+          0.0,
+          268.0
+        ]
+      ],
+      [
+        [
+          0.0,
+          270.0
+        ],
+        [
+          47.0,
+          270.0
+        ],
+        [
+          47.0,
+          288.0
+        ],
+        [
+          0.0,
+          288.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.68538,
+      0.99976,
+      0.99303,
+      0.97077,
+      0.96494
+    ],
+    "raw": {
+      "txts": [
+        "fam Becd",
+        "ER:",
+        "nes Becker",
+        "ation #: 45000046749",
+        "se #:"
+      ],
+      "scores": [
+        0.68538,
+        0.99976,
+        0.99303,
+        0.97077,
+        0.96494
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "45000046749",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Appraisal document signature and file/application number",
+    "confidence": 1.0,
+    "reason": "The image explicitly shows the text '45000046749' next to the 'ation #' label, which matches the provided expected label."
+  },
+  "validation": {
+    "expected_label": "45000046749",
+    "ocr_label_match": true,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

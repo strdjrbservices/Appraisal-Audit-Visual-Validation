@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p37_Photo_1.png",
+  "expected_label": "Subject Bathroom",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Bathroom",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A full bathroom including a vanity with a sink, a toilet, and a tub/shower combination",
+    "confidence": 1.0,
+    "reason": "The image clearly shows the standard fixtures of a residential bathroom."
+  },
+  "validation": {
+    "expected_label": "Subject Bathroom",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\1425_Camden_Rd\\images\\p25_Photo_1.png",
+  "expected_label": "Side",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Side",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Exterior view of a brick building with balconies and windows, showing the side of the building.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows the exterior side of the building."
+  },
+  "validation": {
+    "expected_label": "Side",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

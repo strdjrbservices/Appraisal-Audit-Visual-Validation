@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\90_She_Oak_Dr_SW\\images\\p11_Addendum_Photo_2.png",
+  "expected_label": "Family Room",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Family Room",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Exterior wall of a house with windows and a door, featuring an air conditioning unit.",
+    "confidence": 0.98,
+    "reason": "The image shows an exterior wall of a house, which aligns with the expected label of a family room as a common area within a home."
+  },
+  "validation": {
+    "expected_label": "Family Room",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

@@ -2,9 +2,9 @@ import os
 import sys
 import json
 import base64
+import re
 import pymupdf
 from PIL import Image
-import re
 from pipeline import process_image
 from address_validator import validate_subject_address_consistency, extract_master_subject
 
@@ -25,14 +25,20 @@ def extract_pdf_metadata(doc):
     return metadata
 
 def parse_photo_slots_from_page(page, page_num):
+    """
+    Spatial Proximity & Layout-Aware Photo & Label Extractor.
+    Pairs every visual asset with its exact on-page label across any grid layout:
+    - 3 vertical photo pages (Subject Front/Rear/Street, Comps 1-3)
+    - Multi-photo addenda (PICSIX 6-photo, PIC15 15-photo, PIC4X6, 3x4 grids)
+    - Building sketches & location/aerial maps
+    """
     text = page.get_text()
-    blocks = page.get_text("blocks")
+    d = page.get_text("dict")
     images = page.get_image_info(xrefs=True)
     
-    # Filter real images (width > 60, height > 60)
+    # Filter real images (minimum dimension > 60pt)
     real_images = [img for img in images if (img["bbox"][2] - img["bbox"][0]) > 60 and (img["bbox"][3] - img["bbox"][1]) > 60]
     
-    # Exclude non-photo pages unless they contain sketches or maps
     page_header = text[:300].upper()
     is_photo_page = any(kw in page_header for kw in [
         "PHOTO", "PHOTOGRAPH", "SUBJECT PHOTO", "COMPARABLE PHOTO", 
@@ -40,126 +46,8 @@ def parse_photo_slots_from_page(page, page_num):
         "BUILDING SKETCH", "PLAT MAP", "FLOOD MAP"
     ]) or any(f in text for f in ["PICSIX", "PICINT", "PIC4X6", "PICPIX", "PIC15", "SKT.BLDSKI", "MAP.LOC", "MAP.AERIAL"])
     
-    if not is_photo_page:
-        return []
-    
-    # Check for Form PICSIX2 / PICINT6 (6-photo grid with 2 cols, 3 rows)
-    if "PICSIX" in text.upper() or len(real_images) == 6:
-        sorted_imgs = sorted(real_images, key=lambda img: (round(img["bbox"][1] / 150) * 150, img["bbox"][0]))
-        label_pairs = []
-        for b in sorted(blocks, key=lambda b: b[1]):
-            if b[1] < 100 or b[1] > 950:
-                continue
-            btext = b[4].strip()
-            if any(h in btext for h in ["Borrower", "Lender", "Property Address", "TOTAL", "Form ", "Centereach", "Suffolk"]):
-                continue
-            lines = [l.strip() for l in btext.split("\n") if l.strip()]
-            if lines:
-                label_pairs.append((b, lines))
-        
-        slots = []
-        for idx, img in enumerate(sorted_imgs):
-            bbox = img["bbox"]
-            cx = (bbox[0] + bbox[2]) / 2
-            
-            best_lbl = None
-            for b, lines in label_pairs:
-                if bbox[3] - 20 <= b[1] <= bbox[3] + 80:
-                    if len(lines) == 2:
-                        best_lbl = lines[0] if cx < page.rect.width / 2 else lines[1]
-                        break
-                    elif len(lines) == 1:
-                        best_lbl = lines[0]
-                        break
-            
-            if not best_lbl:
-                best_lbl = f"Addendum Photo {idx+1}"
-                
-            crop_box = (max(0, bbox[0]-10), max(0, bbox[1]-10), min(page.rect.width, bbox[2]+10), min(page.rect.height, bbox[3]+10))
-            slots.append({
-                "slot": f"Photo_{idx+1}",
-                "label": best_lbl,
-                "crop_box": crop_box,
-                "page": page_num
-            })
-        return slots
-
-    # Special case: 15-photo addendum (Form PIC15 or 3x5 grid)
-    if len(real_images) >= 12:
-        sorted_imgs = sorted(real_images, key=lambda img: (round(img["bbox"][1] / 100) * 100, img["bbox"][0]))
-        text_labels = []
-        for b in blocks:
-            lines = [l.strip() for l in b[4].split("\n") if l.strip()]
-            for l in lines:
-                if any(term in l.upper() for term in ["EXTERIOR", "LIVING", "KITCHEN", "BEDROOM", "BATH", "LAUNDRY", "ROOM", "ENTRY", "VIEW", "PANEL", "HEATER", "DETECTOR", "BASEMENT", "ATTIC"]):
-                    if len(l) < 50 and not "FORM" in l.upper():
-                        text_labels.append(l)
-        
-        slots = []
-        for idx, img in enumerate(sorted_imgs):
-            label = text_labels[idx] if idx < len(text_labels) else f"Photo Addendum Slot {idx+1}"
-            bbox = img["bbox"]
-            crop_box = (max(0, bbox[0]-5), max(0, bbox[1]-5), min(page.rect.width, bbox[2]+5), min(page.rect.height, bbox[3]+5))
-            slots.append({
-                "slot": f"Addendum_Photo_{idx+1}",
-                "label": label,
-                "crop_box": crop_box,
-                "page": page_num
-            })
-        return slots
-
-    # Standard 3 vertical photos (Subject Front/Rear/Street or Comparable Sale 1/2/3)
-    if 1 <= len(real_images) <= 5:
-        sorted_imgs = sorted(real_images, key=lambda img: img["bbox"][1])
-        slots = []
-        
-        for idx, img in enumerate(sorted_imgs):
-            bbox = img["bbox"]
-            best_label = None
-            
-            for b in blocks:
-                if b[1] < 100 or b[1] > 950:
-                    continue
-                btext = b[4].strip()
-                if not btext or any(h in btext for h in ["Borrower", "Lender", "Property Address", "TOTAL", "Form "]):
-                    continue
-                
-                if abs(b[1] - bbox[1]) < 60 or (bbox[1] <= b[1] <= bbox[3]):
-                    first_line = btext.split("\n")[0].strip()
-                    if any(k in first_line.upper() for k in ["SUBJECT", "COMPARABLE", "COMP", "FRONT", "REAR", "STREET", "SIDE"]):
-                        best_label = first_line
-                        break
-            
-            if not best_label:
-                if "SUBJECT" in text.upper():
-                    pos_names = ["Subject Front", "Subject Rear", "Subject Street"]
-                    best_label = pos_names[idx] if idx < len(pos_names) else f"Subject Photo {idx+1}"
-                elif "COMPARABLE" in text.upper():
-                    comp_start = 1
-                    m_comp = re.search(r"Comparable\s*(\d+)", text, re.IGNORECASE)
-                    if m_comp:
-                        comp_start = int(m_comp.group(1))
-                    best_label = f"Comparable {comp_start + idx}"
-                elif "SKETCH" in text.upper():
-                    best_label = "Building Sketch Floor Plan Layout"
-                elif "AERIAL" in text.upper():
-                    best_label = "Aerial Map"
-                elif "LOCATION MAP" in text.upper() or "MAP" in text.upper():
-                    best_label = "Location Map"
-                else:
-                    best_label = f"Appraisal Asset {idx+1}"
-            
-            crop_box = (max(0, bbox[0]-10), max(0, bbox[1]-10), min(page.rect.width, bbox[2]+10), min(page.rect.height, bbox[3]+10))
-            slots.append({
-                "slot": f"Photo_{idx+1}",
-                "label": best_label,
-                "crop_box": crop_box,
-                "page": page_num
-            })
-        return slots
-
-    # Page with sketch or map without separate image object (vector graphics)
-    if any(kw in text.upper() for kw in ["BUILDING SKETCH", "FLOOR PLAN"]):
+    # Check for vector sketch/map page without raster image objects
+    if not real_images and any(kw in text.upper() for kw in ["BUILDING SKETCH", "FLOOR PLAN"]):
         return [{
             "slot": "Building_Sketch",
             "label": "Building Sketch Floor Plan Layout",
@@ -167,7 +55,105 @@ def parse_photo_slots_from_page(page, page_num):
             "page": page_num
         }]
 
-    return []
+    if not is_photo_page or not real_images:
+        return []
+
+    # Sort images top-to-bottom, left-to-right (grid row-major)
+    sorted_imgs = sorted(real_images, key=lambda img: (round(img["bbox"][1] / 60) * 60, img["bbox"][0]))
+    
+    # Extract all candidate text spans with bounding boxes
+    text_spans = []
+    ignore_patterns = [
+        r"^Form\s+", r"^TOTAL", r"^Borrower", r"^Lender", r"^Property Address",
+        r"^Page\s+\d+", r"^File\s*#", r"^\d{5}$", r"^[A-Z]{2}$", r"^Appraisal",
+        r"^1-800-ALAMODE", r"^a la mode", r"^Centereach", r"^Suffolk", r"^Madison"
+    ]
+
+    for b in d.get("blocks", []):
+        if "lines" in b:
+            for l in b["lines"]:
+                for s in l.get("spans", []):
+                    st = s.get("text", "").strip()
+                    if not st or len(st) > 80:
+                        continue
+                    if any(re.search(pat, st, re.IGNORECASE) for pat in ignore_patterns):
+                        continue
+                    text_spans.append({
+                        "text": st,
+                        "bbox": s["bbox"],
+                        "cx": (s["bbox"][0] + s["bbox"][2]) / 2,
+                        "cy": (s["bbox"][1] + s["bbox"][3]) / 2
+                    })
+
+    slots = []
+    for idx, img in enumerate(sorted_imgs):
+        ib = img["bbox"]
+        img_cx = (ib[0] + ib[2]) / 2
+        img_cy = (ib[1] + ib[3]) / 2
+        
+        # Look for the best caption span:
+        # 1. Directly below the image (within 55pt below image bottom)
+        # 2. Directly above the image (within 45pt above image top)
+        # 3. Horizontally aligned with the image center
+        candidates = []
+        for span in text_spans:
+            sb = span["bbox"]
+            horiz_dist = abs(span["cx"] - img_cx)
+            # Must overlap horizontally with the image width (with small margin)
+            if (ib[0] - 30 <= span["cx"] <= ib[2] + 30):
+                # Below image (primary standard layout)
+                if (ib[3] - 10 <= sb[1] <= ib[3] + 55):
+                    vert_dist = sb[1] - ib[3]
+                    candidates.append((0, vert_dist, horiz_dist, span["text"]))
+                # Above image (secondary layout)
+                elif (ib[1] - 50 <= sb[3] <= ib[1] + 10):
+                    vert_dist = ib[1] - sb[3]
+                    candidates.append((1, vert_dist, horiz_dist, span["text"]))
+
+        candidates.sort(key=lambda x: (x[0], x[1], x[2]))
+        
+        assigned_label = ""
+        if candidates:
+            # Pick top candidate and join multi-line title if applicable
+            best_txt = candidates[0][3].strip()
+            assigned_label = best_txt
+
+        # Fallback labels if no caption was found near slot
+        if not assigned_label:
+            if "SUBJECT" in text.upper():
+                pos_names = ["Subject Front", "Subject Rear", "Subject Street"]
+                assigned_label = pos_names[idx] if idx < len(pos_names) else f"Subject Photo {idx+1}"
+            elif "COMPARABLE" in text.upper():
+                comp_num = 1
+                m = re.search(r"Comparable\s*(\d+)", text, re.IGNORECASE)
+                if m:
+                    comp_num = int(m.group(1))
+                assigned_label = f"Comparable {comp_num + idx}"
+            elif "SKETCH" in text.upper():
+                assigned_label = "Building Sketch Floor Plan Layout"
+            elif "AERIAL" in text.upper():
+                assigned_label = "Aerial Map"
+            elif "LOCATION MAP" in text.upper() or "MAP" in text.upper():
+                assigned_label = "Location Map"
+            else:
+                assigned_label = f"Photo Addendum Slot {idx+1}"
+
+        # Clean crop box with safety bounds
+        crop_box = (
+            max(0, ib[0] - 8),
+            max(0, ib[1] - 8),
+            min(page.rect.width, ib[2] + 8),
+            min(page.rect.height, ib[3] + 8)
+        )
+
+        slots.append({
+            "slot": f"Photo_{idx+1}",
+            "label": assigned_label,
+            "crop_box": crop_box,
+            "page": page_num
+        })
+
+    return slots
 
 def generate_html_report(metadata, results, output_html_path, address_audit=None):
     pass_cnt = sum(1 for r in results if r["status"] == "PASS")
@@ -184,7 +170,6 @@ def generate_html_report(metadata, results, output_html_path, address_audit=None
     addr_rate = address_audit.get("match_rate_pct", 100) if address_audit else 100
     addr_status = address_audit.get("overall_status", "PASS") if address_audit else "PASS"
 
-    # Address Audit Rows HTML
     addr_rows_html = ""
     if address_audit and address_audit.get("sections"):
         for sec in address_audit["sections"]:
@@ -205,7 +190,6 @@ def generate_html_report(metadata, results, output_html_path, address_audit=None
             </tr>
             """
 
-    # Build card items HTML
     cards_html = ""
     for r in results:
         status = r["status"]
@@ -213,7 +197,6 @@ def generate_html_report(metadata, results, output_html_path, address_audit=None
         badge_bg = "rgba(16, 185, 129, 0.15)" if status == "PASS" else ("rgba(245, 158, 11, 0.15)" if status == "REVIEW" else "rgba(239, 68, 68, 0.15)")
         conf_pct = int(r.get("gemma_confidence", 0) * 100)
         
-        # Read image to base64 for standalone HTML embedding
         img_b64 = ""
         if os.path.exists(r["image_path"]):
             with open(r["image_path"], "rb") as f:
@@ -223,10 +206,13 @@ def generate_html_report(metadata, results, output_html_path, address_audit=None
         if not ocr_tags:
             ocr_tags = '<span class="ocr-tag ocr-empty">No overlay text detected</span>'
 
+        safe_label = r['expected_label'].replace("'", "\\'").replace('"', '&quot;')
+        safe_obs = r.get('observed_object', '').replace("'", "\\'").replace('"', '&quot;')
+
         cards_html += f"""
-        <div class="card" data-status="{status}">
+        <div class="card" data-status="{status}" data-label="{r['expected_label'].lower()}">
             <div class="card-img-wrap">
-                <img src="{img_b64}" alt="{r['expected_label']}" loading="lazy" onclick="openModal('{img_b64}', '{r['expected_label']}')" />
+                <img src="{img_b64}" alt="{safe_label}" loading="lazy" onclick="openModal('{img_b64}', '{safe_label}', '{status}', '{conf_pct}%', '{safe_obs}')" />
                 <span class="badge" style="background: {badge_bg}; color: {status_color}; border: 1px solid {status_color};">{status}</span>
             </div>
             <div class="card-body">
@@ -475,6 +461,19 @@ def generate_html_report(metadata, results, output_html_path, address_audit=None
             background: var(--primary);
             color: #0f172a;
         }}
+        .search-input {{
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: #fff;
+            padding: 8px 14px;
+            border-radius: 10px;
+            font-size: 13px;
+            outline: none;
+            min-width: 220px;
+        }}
+        .search-input:focus {{
+            border-color: var(--primary);
+        }}
 
         .grid {{
             display: grid;
@@ -592,11 +591,24 @@ def generate_html_report(metadata, results, output_html_path, address_audit=None
             padding: 20px;
         }}
         .modal.active {{ display: flex; }}
+        .modal-box {{
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            max-width: 900px;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+        }}
         .modal-content {{
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 12px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+            background: #000;
+            display: block;
+        }}
+        .modal-details {{
+            padding: 20px;
         }}
     </style>
 </head>
@@ -688,11 +700,12 @@ def generate_html_report(metadata, results, output_html_path, address_audit=None
 
         <div class="toolbar">
             <div class="filters">
-                <button class="filter-btn active" onclick="filterStatus('all')">All Assets ({len(results)})</button>
-                <button class="filter-btn" onclick="filterStatus('PASS')">Passed ({pass_cnt})</button>
-                <button class="filter-btn" onclick="filterStatus('REVIEW')">Review ({review_cnt})</button>
-                <button class="filter-btn" onclick="filterStatus('FAIL')">Failed ({fail_cnt})</button>
+                <button class="filter-btn active" onclick="filterStatus('all', this)">All Assets ({len(results)})</button>
+                <button class="filter-btn" onclick="filterStatus('PASS', this)">Passed ({pass_cnt})</button>
+                <button class="filter-btn" onclick="filterStatus('REVIEW', this)">Review ({review_cnt})</button>
+                <button class="filter-btn" onclick="filterStatus('FAIL', this)">Failed ({fail_cnt})</button>
             </div>
+            <input type="text" class="search-input" placeholder="Search photo label..." onkeyup="filterSearch(this.value)" />
         </div>
 
         <main class="grid">
@@ -701,16 +714,24 @@ def generate_html_report(metadata, results, output_html_path, address_audit=None
     </div>
 
     <div id="imageModal" class="modal" onclick="closeModal()">
-        <img id="modalImg" class="modal-content" src="" />
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <img id="modalImg" class="modal-content" src="" />
+            <div class="modal-details">
+                <h3 id="modalTitle" style="color: #fff; margin-bottom: 6px;"></h3>
+                <p id="modalObs" style="font-size: 14px; color: var(--text-muted);"></p>
+            </div>
+        </div>
     </div>
 
     <script>
-        function filterStatus(status) {{
-            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-            
+        let currentStatus = 'all';
+        let currentSearch = '';
+
+        function applyFilters() {{
             document.querySelectorAll('.card').forEach(card => {{
-                if (status === 'all' || card.getAttribute('data-status') === status) {{
+                const statusMatch = (currentStatus === 'all' || card.getAttribute('data-status') === currentStatus);
+                const searchMatch = !currentSearch || (card.getAttribute('data-label') || '').includes(currentSearch.toLowerCase());
+                if (statusMatch && searchMatch) {{
                     card.style.display = 'flex';
                 }} else {{
                     card.style.display = 'none';
@@ -718,10 +739,26 @@ def generate_html_report(metadata, results, output_html_path, address_audit=None
             }});
         }}
 
-        function openModal(src, title) {{
+        function filterStatus(status, btnElement) {{
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            if (btnElement) btnElement.classList.add('active');
+            currentStatus = status;
+            applyFilters();
+        }}
+
+        function filterSearch(val) {{
+            currentSearch = val;
+            applyFilters();
+        }}
+
+        function openModal(src, title, status, conf, obs) {{
             const modal = document.getElementById('imageModal');
             const img = document.getElementById('modalImg');
+            const t = document.getElementById('modalTitle');
+            const o = document.getElementById('modalObs');
             img.src = src;
+            t.innerText = title + ' [' + status + ' - ' + conf + ']';
+            o.innerText = 'Observed: ' + obs;
             modal.classList.add('active');
         }}
 
@@ -851,5 +888,5 @@ def process_appraisal_file(pdf_path, output_dir=None):
     return html_report_path, summary_path
 
 if __name__ == "__main__":
-    target = sys.argv[1] if len(sys.argv) > 1 else r"C:\Users\Admin\Downloads\16 Firwood Dr.pdf"
+    target = sys.argv[1] if len(sys.argv) > 1 else r"C:\Users\Admin\Downloads\90 She Oak Dr SW.pdf"
     process_appraisal_file(target)

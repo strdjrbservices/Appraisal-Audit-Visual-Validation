@@ -1,0 +1,78 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p31_Photo_1.png",
+  "expected_label": "Subject Front",
+  "paddleocr": {
+    "text": [
+      "Sold",
+      "DRHORTON"
+    ],
+    "boxes": [
+      [
+        [
+          464.0,
+          531.0
+        ],
+        [
+          552.0,
+          543.0
+        ],
+        [
+          546.0,
+          589.0
+        ],
+        [
+          457.0,
+          577.0
+        ]
+      ],
+      [
+        [
+          474.0,
+          575.0
+        ],
+        [
+          531.0,
+          584.0
+        ],
+        [
+          528.0,
+          604.0
+        ],
+        [
+          471.0,
+          595.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.9999,
+      0.92386
+    ],
+    "raw": {
+      "txts": [
+        "Sold",
+        "DRHORTON"
+      ],
+      "scores": [
+        0.9999,
+        0.92386
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Front",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "front exterior view of a two-story residential house",
+    "confidence": 1.0,
+    "reason": "The image clearly displays the front facade of a residential property, including the garage, entryway, and front yard."
+  },
+  "validation": {
+    "expected_label": "Subject Front",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

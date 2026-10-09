@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p29_Photo_6.png",
+  "expected_label": "Generator",
+  "paddleocr": {
+    "text": [
+      "2"
+    ],
+    "boxes": [
+      [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          710.0,
+          0.0
+        ],
+        [
+          710.0,
+          545.0
+        ],
+        [
+          0.0,
+          545.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.69477
+    ],
+    "raw": {
+      "txts": [
+        "2"
+      ],
+      "scores": [
+        0.69477
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Generator",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "An outdoor standby backup generator unit.",
+    "confidence": 1.0,
+    "reason": "The image clearly shows a typical weather-resistant enclosure for a whole-home standby generator."
+  },
+  "validation": {
+    "expected_label": "Generator",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p19_Photo_1.png",
+  "expected_label": "Property Address",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Property Address",
+    "label_present": false,
+    "label_correct": false,
+    "observed_object": "front exterior of a house",
+    "confidence": 0.7,
+    "reason": "The photo shows the front exterior of the house, but there is no visible address number."
+  },
+  "validation": {
+    "expected_label": "Property Address",
+    "ocr_label_match": false,
+    "gemma_label_correct": false,
+    "gemma_confidence": 0.7,
+    "status": "FAIL",
+    "reason": "Image evidence does not sufficiently support the expected label."
+  }
+}

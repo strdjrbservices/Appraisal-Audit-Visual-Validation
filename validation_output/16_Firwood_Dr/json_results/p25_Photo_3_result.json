@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p25_Photo_3.png",
+  "expected_label": "ADU Bedroom",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "ADU Bedroom",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A small, unfinished bedroom with light gray vinyl flooring, tan walls, and wooden cabinetry.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a small bedroom space with the features consistent with an ADU bedroom."
+  },
+  "validation": {
+    "expected_label": "ADU Bedroom",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

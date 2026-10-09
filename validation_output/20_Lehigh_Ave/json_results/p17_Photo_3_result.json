@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p17_Photo_3.png",
+  "expected_label": "Heating System",
+  "paddleocr": {
+    "text": [
+      "LI"
+    ],
+    "boxes": [
+      [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          710.0,
+          0.0
+        ],
+        [
+          710.0,
+          545.0
+        ],
+        [
+          0.0,
+          545.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.63436
+    ],
+    "raw": {
+      "txts": [
+        "LI"
+      ],
+      "scores": [
+        0.63436
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Heating System",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Navien tankless wall-mounted unit, which can function as a tankless water heater or a combi-boiler for heating systems",
+    "confidence": 0.95,
+    "reason": "The image shows a Navien wall-mounted unit often used for home heating (combi-boiler) or domestic hot water production, fitting the category of a heating system."
+  },
+  "validation": {
+    "expected_label": "Heating System",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

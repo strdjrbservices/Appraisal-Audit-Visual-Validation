@@ -1,0 +1,78 @@
+{
+  "image_path": "validation_output\\images\\p14_Breaker_Panel.png",
+  "expected_label": "Electrical Breaker Panel",
+  "paddleocr": {
+    "text": [
+      "Batmroom 2",
+      "Breaker Panel"
+    ],
+    "boxes": [
+      [
+        [
+          132.0,
+          0.0
+        ],
+        [
+          281.0,
+          0.0
+        ],
+        [
+          281.0,
+          13.0
+        ],
+        [
+          132.0,
+          12.0
+        ]
+      ],
+      [
+        [
+          113.0,
+          379.0
+        ],
+        [
+          301.0,
+          378.0
+        ],
+        [
+          301.0,
+          403.0
+        ],
+        [
+          113.0,
+          403.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.78072,
+      0.99693
+    ],
+    "raw": {
+      "txts": [
+        "Batmroom 2",
+        "Breaker Panel"
+      ],
+      "scores": [
+        0.78072,
+        0.99693
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Electrical Breaker Panel",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Electrical breaker panel mounted on an exterior brick wall",
+    "confidence": 1.0,
+    "reason": "The image clearly depicts the interior of an open electrical breaker panel."
+  },
+  "validation": {
+    "expected_label": "Electrical Breaker Panel",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p35_Photo_1.png",
+  "expected_label": "Subject Entry",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Entry",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Interior entryway featuring a front door with a smart lock, a doormat, and wood-look flooring.",
+    "confidence": 1.0,
+    "reason": "The image clearly shows the interior side of a front entrance door, consistent with a subject entry."
+  },
+  "validation": {
+    "expected_label": "Subject Entry",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

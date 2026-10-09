@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p29_Photo_4.png",
+  "expected_label": "Enclosed Porch",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Enclosed Porch",
+    "label_present": true,
+    "label_correct": false,
+    "observed_object": "A home office or living room area with a wood-plank ceiling, red walls, and furniture including a desk, filing cabinet, and chairs.",
+    "confidence": 0.95,
+    "reason": "The image displays a finished interior room used as a home office, not an enclosed porch."
+  },
+  "validation": {
+    "expected_label": "Enclosed Porch",
+    "ocr_label_match": false,
+    "gemma_label_correct": false,
+    "gemma_confidence": 0.95,
+    "status": "FAIL",
+    "reason": "Image evidence does not sufficiently support the expected label."
+  }
+}

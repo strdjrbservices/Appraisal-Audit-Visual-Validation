@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p17_Photo_4.png",
+  "expected_label": "Heating System",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Heating System",
+    "label_present": false,
+    "label_correct": false,
+    "observed_object": "electrical breaker panel",
+    "confidence": 1.0,
+    "reason": "The image shows an electrical breaker panel, not a heating system."
+  },
+  "validation": {
+    "expected_label": "Heating System",
+    "ocr_label_match": false,
+    "gemma_label_correct": false,
+    "gemma_confidence": 1.0,
+    "status": "FAIL",
+    "reason": "Image evidence does not sufficiently support the expected label."
+  }
+}

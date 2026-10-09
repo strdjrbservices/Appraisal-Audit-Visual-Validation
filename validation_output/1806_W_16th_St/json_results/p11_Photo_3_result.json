@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\1806_W_16th_St\\images\\p11_Photo_3.png",
+  "expected_label": "Comparable 3",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 3",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Exterior view of a residential house",
+    "confidence": 0.95,
+    "reason": "The image shows the exterior of a home, which is consistent with the type of images provided for real estate property comparables."
+  },
+  "validation": {
+    "expected_label": "Comparable 3",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

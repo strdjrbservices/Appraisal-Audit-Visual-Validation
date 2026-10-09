@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\images\\p13_Bedroom_2_View2.png",
+  "expected_label": "Bedroom 2 Additional View",
+  "paddleocr": {
+    "text": [
+      "Bedroom 2"
+    ],
+    "boxes": [
+      [
+        [
+          131.0,
+          372.0
+        ],
+        [
+          282.0,
+          374.0
+        ],
+        [
+          282.0,
+          402.0
+        ],
+        [
+          131.0,
+          402.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.99979
+    ],
+    "raw": {
+      "txts": [
+        "Bedroom 2"
+      ],
+      "scores": [
+        0.99979
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Bedroom 2 Additional View",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A bedroom containing two beds, a dresser, and a wall-mounted TV.",
+    "confidence": 0.98,
+    "reason": "The image is explicitly labeled 'Bedroom 2' and shows bedroom furniture, confirming it is an additional view of a bedroom."
+  },
+  "validation": {
+    "expected_label": "Bedroom 2 Additional View",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

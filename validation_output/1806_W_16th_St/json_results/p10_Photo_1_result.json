@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\1806_W_16th_St\\images\\p10_Photo_1.png",
+  "expected_label": "Subject Front",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Front",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "front exterior view of a single-story residential home",
+    "confidence": 1.0,
+    "reason": "The image clearly displays the front facade of a residential property, including the entrance and front yard."
+  },
+  "validation": {
+    "expected_label": "Subject Front",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

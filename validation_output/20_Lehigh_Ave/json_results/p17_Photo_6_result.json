@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p17_Photo_6.png",
+  "expected_label": "Smoke Detectors",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Smoke Detectors",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A white smoke detector mounted on a ceiling.",
+    "confidence": 1.0,
+    "reason": "The image clearly displays a standard residential smoke detector."
+  },
+  "validation": {
+    "expected_label": "Smoke Detectors",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

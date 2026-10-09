@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\90_She_Oak_Dr_SW\\images\\p11_Addendum_Photo_12.png",
+  "expected_label": "Photo Addendum Slot 12",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Photo Addendum Slot 12",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Interior view of a room with two windows, a ceiling fan, and light-colored flooring.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a room, consistent with the expected label of a 'Photo Addendum Slot'."
+  },
+  "validation": {
+    "expected_label": "Photo Addendum Slot 12",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

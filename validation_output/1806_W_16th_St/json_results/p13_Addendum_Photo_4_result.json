@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\1806_W_16th_St\\images\\p13_Addendum_Photo_4.png",
+  "expected_label": "Rear/Right Exterior",
+  "paddleocr": {
+    "text": [
+      "D"
+    ],
+    "boxes": [
+      [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          382.0,
+          0.0
+        ],
+        [
+          382.0,
+          293.0
+        ],
+        [
+          0.0,
+          293.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.85853
+    ],
+    "raw": {
+      "txts": [
+        "D"
+      ],
+      "scores": [
+        0.85853
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Rear/Right Exterior",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Side profile of a brick residential structure showing windows and exterior walls",
+    "confidence": 0.95,
+    "reason": "The image shows the side exterior wall of a brick house, which is consistent with a rear or side perspective of a property."
+  },
+  "validation": {
+    "expected_label": "Rear/Right Exterior",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

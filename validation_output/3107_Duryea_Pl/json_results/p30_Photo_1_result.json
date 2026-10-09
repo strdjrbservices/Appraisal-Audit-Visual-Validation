@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p30_Photo_1.png",
+  "expected_label": "Subject Front",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Front",
+    "label_present": true,
+    "label_correct": false,
+    "observed_object": "Outdoor patio/kitchen area at the rear of the house",
+    "confidence": 0.98,
+    "reason": "The image shows an outdoor patio and kitchen area attached to the rear of the property, not the front exterior of the subject."
+  },
+  "validation": {
+    "expected_label": "Subject Front",
+    "ocr_label_match": false,
+    "gemma_label_correct": false,
+    "gemma_confidence": 0.98,
+    "status": "FAIL",
+    "reason": "Image evidence does not sufficiently support the expected label."
+  }
+}

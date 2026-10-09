@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\images\\p13_Front_Left_Exterior.png",
+  "expected_label": "Front/Left Exterior",
+  "paddleocr": {
+    "text": [
+      "Eront/Left. Exterior"
+    ],
+    "boxes": [
+      [
+        [
+          229.0,
+          367.0
+        ],
+        [
+          472.0,
+          367.0
+        ],
+        [
+          472.0,
+          389.0
+        ],
+        [
+          229.0,
+          389.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.93123
+    ],
+    "raw": {
+      "txts": [
+        "Eront/Left. Exterior"
+      ],
+      "scores": [
+        0.93123
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Front/Left Exterior",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Brick residential building exterior view from the front-left angle",
+    "confidence": 1.0,
+    "reason": "The image clearly shows the front and left side of a brick house, matching the provided label."
+  },
+  "validation": {
+    "expected_label": "Front/Left Exterior",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

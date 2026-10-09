@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p28_Photo_6.png",
+  "expected_label": "Bathroom (Basement)",
+  "paddleocr": {
+    "text": [
+      "K"
+    ],
+    "boxes": [
+      [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          710.0,
+          0.0
+        ],
+        [
+          710.0,
+          545.0
+        ],
+        [
+          0.0,
+          545.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.86447
+    ],
+    "raw": {
+      "txts": [
+        "K"
+      ],
+      "scores": [
+        0.86447
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Bathroom (Basement)",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A full bathroom featuring a glass-enclosed shower, a toilet, and a vanity sink.",
+    "confidence": 0.85,
+    "reason": "The image clearly shows a complete bathroom setup. While basement location cannot be definitively confirmed from the image alone, the plumbing fixtures are consistent with a typical residential bathroom."
+  },
+  "validation": {
+    "expected_label": "Bathroom (Basement)",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.85,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

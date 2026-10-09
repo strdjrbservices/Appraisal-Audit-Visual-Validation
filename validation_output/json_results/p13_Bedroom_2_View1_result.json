@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\images\\p13_Bedroom_2_View1.png",
+  "expected_label": "Bedroom 2",
+  "paddleocr": {
+    "text": [
+      "Bedroom 2"
+    ],
+    "boxes": [
+      [
+        [
+          277.0,
+          372.0
+        ],
+        [
+          423.0,
+          374.0
+        ],
+        [
+          423.0,
+          402.0
+        ],
+        [
+          276.0,
+          402.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.99971
+    ],
+    "raw": {
+      "txts": [
+        "Bedroom 2"
+      ],
+      "scores": [
+        0.99971
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Bedroom 2",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A bedroom containing two twin beds, a closet, and personal belongings.",
+    "confidence": 1.0,
+    "reason": "The image clearly shows a room furnished with beds and a closet, which is characteristic of a bedroom."
+  },
+  "validation": {
+    "expected_label": "Bedroom 2",
+    "ocr_label_match": true,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

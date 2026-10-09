@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p23_Photo_3.png",
+  "expected_label": "Dining Room",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Dining Room",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A dark-wood dining table with four chairs is present in a room with a window and a chandelier.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a dining table and chairs, indicating a dining room."
+  },
+  "validation": {
+    "expected_label": "Dining Room",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\images\\p14_Smoke_Detector.png",
+  "expected_label": "Smoke Detector",
+  "paddleocr": {
+    "text": [
+      "Smoke Deteotor"
+    ],
+    "boxes": [
+      [
+        [
+          55.0,
+          370.0
+        ],
+        [
+          266.0,
+          371.0
+        ],
+        [
+          266.0,
+          389.0
+        ],
+        [
+          55.0,
+          389.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.87223
+    ],
+    "raw": {
+      "txts": [
+        "Smoke Deteotor"
+      ],
+      "scores": [
+        0.87223
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Smoke Detector",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A smoke detector mounted on a drop ceiling.",
+    "confidence": 1.0,
+    "reason": "The image clearly shows a standard residential smoke detector installed on a ceiling."
+  },
+  "validation": {
+    "expected_label": "Smoke Detector",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

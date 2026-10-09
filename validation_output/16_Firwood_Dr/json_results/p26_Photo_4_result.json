@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p26_Photo_4.png",
+  "expected_label": "Electric Meter",
+  "paddleocr": {
+    "text": [
+      "TAB"
+    ],
+    "boxes": [
+      [
+        [
+          210.0,
+          286.0
+        ],
+        [
+          232.0,
+          288.0
+        ],
+        [
+          230.0,
+          302.0
+        ],
+        [
+          209.0,
+          300.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.90075
+    ],
+    "raw": {
+      "txts": [
+        "TAB"
+      ],
+      "scores": [
+        0.90075
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Electric Meter",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A gray exterior wall with a silver electric meter mounted on it, along with associated wiring and a small white electrical outlet.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows an electric meter mounted on an exterior wall, which aligns with the expected label."
+  },
+  "validation": {
+    "expected_label": "Electric Meter",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

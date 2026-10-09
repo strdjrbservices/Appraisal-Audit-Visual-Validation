@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p41_Photo_2.png",
+  "expected_label": "Subject Storm S. Interior",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Storm S. Interior",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "interior of an in-ground storm shelter",
+    "confidence": 0.98,
+    "reason": "The image shows the view looking down into the interior of an underground steel storm shelter with carpeted steps and benches."
+  },
+  "validation": {
+    "expected_label": "Subject Storm S. Interior",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

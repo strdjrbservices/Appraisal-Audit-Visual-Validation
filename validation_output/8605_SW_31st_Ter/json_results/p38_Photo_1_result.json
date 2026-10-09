@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p38_Photo_1.png",
+  "expected_label": "Subject Laundry Area",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Laundry Area",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A recessed laundry area featuring plumbing hookups and a dryer vent box on the wall, along with a storage shelf.",
+    "confidence": 1.0,
+    "reason": "The image clearly shows the plumbing, electrical, and ventilation connections typical of a laundry hookup area."
+  },
+  "validation": {
+    "expected_label": "Subject Laundry Area",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

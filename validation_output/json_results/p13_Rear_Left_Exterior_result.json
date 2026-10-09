@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\images\\p13_Rear_Left_Exterior.png",
+  "expected_label": "Rear/Left Exterior",
+  "paddleocr": {
+    "text": [
+      "Rear/L eft. Exterior"
+    ],
+    "boxes": [
+      [
+        [
+          41.0,
+          367.0
+        ],
+        [
+          277.0,
+          367.0
+        ],
+        [
+          277.0,
+          389.0
+        ],
+        [
+          41.0,
+          389.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.92452
+    ],
+    "raw": {
+      "txts": [
+        "Rear/L eft. Exterior"
+      ],
+      "scores": [
+        0.92452
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Rear/Left Exterior",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Brick exterior wall of a house with a window, door, and HVAC unit",
+    "confidence": 0.95,
+    "reason": "The image shows the side and rear corner of a brick residential structure, consistent with a Rear/Left exterior view."
+  },
+  "validation": {
+    "expected_label": "Rear/Left Exterior",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

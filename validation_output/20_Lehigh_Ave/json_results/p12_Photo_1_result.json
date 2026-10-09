@@ -1,0 +1,254 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p12_Photo_1.png",
+  "expected_label": "James Becker",
+  "paddleocr": {
+    "text": [
+      "Name",
+      "James Becker",
+      "Name",
+      "Express Appraisal Services Inc",
+      "Address",
+      "179 Roberts St, Holbrook, NY 11741",
+      "se/Certification #",
+      "45000046749",
+      "State",
+      "NY"
+    ],
+    "boxes": [
+      [
+        [
+          0.0,
+          174.0
+        ],
+        [
+          41.0,
+          175.0
+        ],
+        [
+          40.0,
+          200.0
+        ],
+        [
+          0.0,
+          199.0
+        ]
+      ],
+      [
+        [
+          72.0,
+          178.0
+        ],
+        [
+          213.0,
+          178.0
+        ],
+        [
+          213.0,
+          201.0
+        ],
+        [
+          72.0,
+          201.0
+        ]
+      ],
+      [
+        [
+          0.0,
+          202.0
+        ],
+        [
+          42.0,
+          203.0
+        ],
+        [
+          41.0,
+          229.0
+        ],
+        [
+          0.0,
+          228.0
+        ]
+      ],
+      [
+        [
+          72.0,
+          205.0
+        ],
+        [
+          371.0,
+          206.0
+        ],
+        [
+          371.0,
+          232.0
+        ],
+        [
+          72.0,
+          231.0
+        ]
+      ],
+      [
+        [
+          0.0,
+          231.0
+        ],
+        [
+          58.0,
+          231.0
+        ],
+        [
+          58.0,
+          256.0
+        ],
+        [
+          0.0,
+          256.0
+        ]
+      ],
+      [
+        [
+          97.0,
+          234.0
+        ],
+        [
+          443.0,
+          235.0
+        ],
+        [
+          443.0,
+          258.0
+        ],
+        [
+          97.0,
+          257.0
+        ]
+      ],
+      [
+        [
+          0.0,
+          261.0
+        ],
+        [
+          129.0,
+          262.0
+        ],
+        [
+          129.0,
+          284.0
+        ],
+        [
+          0.0,
+          283.0
+        ]
+      ],
+      [
+        [
+          149.0,
+          263.0
+        ],
+        [
+          283.0,
+          264.0
+        ],
+        [
+          283.0,
+          287.0
+        ],
+        [
+          149.0,
+          285.0
+        ]
+      ],
+      [
+        [
+          394.0,
+          261.0
+        ],
+        [
+          439.0,
+          261.0
+        ],
+        [
+          439.0,
+          284.0
+        ],
+        [
+          394.0,
+          284.0
+        ]
+      ],
+      [
+        [
+          448.0,
+          263.0
+        ],
+        [
+          486.0,
+          263.0
+        ],
+        [
+          486.0,
+          285.0
+        ],
+        [
+          448.0,
+          285.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.96808,
+      0.99984,
+      0.9135,
+      0.9917,
+      0.99996,
+      0.97799,
+      0.99436,
+      0.99999,
+      0.99997,
+      0.99993
+    ],
+    "raw": {
+      "txts": [
+        "Name",
+        "James Becker",
+        "Name",
+        "Express Appraisal Services Inc",
+        "Address",
+        "179 Roberts St, Holbrook, NY 11741",
+        "se/Certification #",
+        "45000046749",
+        "State",
+        "NY"
+      ],
+      "scores": [
+        0.96808,
+        0.99984,
+        0.9135,
+        0.9917,
+        0.99996,
+        0.97799,
+        0.99436,
+        0.99999,
+        0.99997,
+        0.99993
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "James Becker",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A handwritten signature and printed text identifying James Becker, Express Appraisal Services Inc, and certification details.",
+    "confidence": 1.0,
+    "reason": "The image explicitly displays the name James Becker in both signature and printed text format."
+  },
+  "validation": {
+    "expected_label": "James Becker",
+    "ocr_label_match": true,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

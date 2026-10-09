@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p23_Photo_4.png",
+  "expected_label": "Kitchen",
+  "paddleocr": {
+    "text": [
+      "Gi,"
+    ],
+    "boxes": [
+      [
+        [
+          651.0,
+          97.0
+        ],
+        [
+          678.0,
+          97.0
+        ],
+        [
+          678.0,
+          117.0
+        ],
+        [
+          651.0,
+          117.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.51336
+    ],
+    "raw": {
+      "txts": [
+        "Gi,"
+      ],
+      "scores": [
+        0.51336
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Kitchen",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A kitchen interior with light-colored wood cabinets, stainless steel appliances, and tile flooring.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a kitchen with standard features like cabinets, a stove, refrigerator, and sink."
+  },
+  "validation": {
+    "expected_label": "Kitchen",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

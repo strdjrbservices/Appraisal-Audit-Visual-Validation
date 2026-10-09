@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p16_Photo_5.png",
+  "expected_label": "Drop Stairs",
+  "paddleocr": {
+    "text": [
+      "A"
+    ],
+    "boxes": [
+      [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          710.0,
+          0.0
+        ],
+        [
+          710.0,
+          545.0
+        ],
+        [
+          0.0,
+          545.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.99734
+    ],
+    "raw": {
+      "txts": [
+        "A"
+      ],
+      "scores": [
+        0.99734
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Drop Stairs",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Retractable attic access ladder (drop stairs) extending through a ceiling hatch",
+    "confidence": 1.0,
+    "reason": "The image clearly shows a typical metal drop-down attic ladder mechanism attached to a ceiling opening."
+  },
+  "validation": {
+    "expected_label": "Drop Stairs",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

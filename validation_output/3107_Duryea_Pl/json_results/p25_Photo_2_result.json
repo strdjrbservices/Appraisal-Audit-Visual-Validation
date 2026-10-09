@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p25_Photo_2.png",
+  "expected_label": "Subject Rear",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Rear",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "rear exterior view of a residential property showing a backyard patio, siding, chimney, and landscaping",
+    "confidence": 1.0,
+    "reason": "The image clearly shows the rear elevation of the subject property, including the backyard area, patio, and rear house structure."
+  },
+  "validation": {
+    "expected_label": "Subject Rear",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

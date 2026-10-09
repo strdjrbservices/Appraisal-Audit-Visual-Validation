@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\images\\p14_Bedroom_3_View2.png",
+  "expected_label": "Bedroom 3 Additional View",
+  "paddleocr": {
+    "text": [
+      "Bedroom 3"
+    ],
+    "boxes": [
+      [
+        [
+          86.0,
+          368.0
+        ],
+        [
+          233.0,
+          368.0
+        ],
+        [
+          233.0,
+          389.0
+        ],
+        [
+          86.0,
+          389.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.9673
+    ],
+    "raw": {
+      "txts": [
+        "Bedroom 3"
+      ],
+      "scores": [
+        0.9673
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Bedroom 3 Additional View",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Interior view of a bedroom featuring a bed, dresser, and various personal items",
+    "confidence": 0.98,
+    "reason": "The image clearly shows the interior of a bedroom space, which is consistent with the provided label."
+  },
+  "validation": {
+    "expected_label": "Bedroom 3 Additional View",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

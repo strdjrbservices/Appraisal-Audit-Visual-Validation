@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p32_Photo_2.png",
+  "expected_label": "Subject Side",
+  "paddleocr": {
+    "text": [
+      "D"
+    ],
+    "boxes": [
+      [
+        [
+          268.0,
+          0.0
+        ],
+        [
+          556.0,
+          13.0
+        ],
+        [
+          534.0,
+          345.0
+        ],
+        [
+          241.0,
+          321.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.6631
+    ],
+    "raw": {
+      "txts": [
+        "D"
+      ],
+      "scores": [
+        0.6631
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Side",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Exterior side elevation of a residential property",
+    "confidence": 0.98,
+    "reason": "The image shows the side exterior wall of the property, including utility meters and the junction with the front garage elevation."
+  },
+  "validation": {
+    "expected_label": "Subject Side",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

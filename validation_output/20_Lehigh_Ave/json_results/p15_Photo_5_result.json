@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p15_Photo_5.png",
+  "expected_label": "Bedroom",
+  "paddleocr": {
+    "text": [
+      "L"
+    ],
+    "boxes": [
+      [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          710.0,
+          0.0
+        ],
+        [
+          710.0,
+          545.0
+        ],
+        [
+          0.0,
+          545.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.70728
+    ],
+    "raw": {
+      "txts": [
+        "L"
+      ],
+      "scores": [
+        0.70728
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Bedroom",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "An empty bedroom with hardwood floors and a window",
+    "confidence": 0.95,
+    "reason": "The image shows a standard interior residential room with hardwood flooring and a window, consistent with a bedroom layout."
+  },
+  "validation": {
+    "expected_label": "Bedroom",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

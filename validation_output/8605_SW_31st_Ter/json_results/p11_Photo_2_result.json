@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p11_Photo_2.png",
+  "expected_label": "Comparable 5",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 5",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A residential single-family home exterior",
+    "confidence": 0.95,
+    "reason": "The image shows the front exterior of a residential home, which is a standard format for a real estate comparable property."
+  },
+  "validation": {
+    "expected_label": "Comparable 5",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

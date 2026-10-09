@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p21_Photo_3.png",
+  "expected_label": "Subject Street",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Street",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A paved street with trees lining both sides, appearing to be a residential street.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a street, which aligns with the expected label 'Subject Street'."
+  },
+  "validation": {
+    "expected_label": "Subject Street",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

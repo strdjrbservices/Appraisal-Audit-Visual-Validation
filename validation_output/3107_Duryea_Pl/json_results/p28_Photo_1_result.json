@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p28_Photo_1.png",
+  "expected_label": "Bathroom",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Bathroom",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A bathroom featuring a freestanding tub, a walk-in shower, and a vanity sink with marble-style wall tiles.",
+    "confidence": 1.0,
+    "reason": "The image clearly shows standard bathroom fixtures including a bathtub, shower enclosure, and vanity."
+  },
+  "validation": {
+    "expected_label": "Bathroom",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

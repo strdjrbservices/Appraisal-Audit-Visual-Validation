@@ -1,0 +1,188 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p09_Photo_1.png",
+  "expected_label": "Express Appraisal Services Inc",
+  "paddleocr": {
+    "text": [
+      "ER",
+      "ames Becker",
+      "Name",
+      "Express Appraisal Services Inc",
+      "Address",
+      "179 Roberts St",
+      "Holbrook, NY 11741"
+    ],
+    "boxes": [
+      [
+        [
+          0.0,
+          84.0
+        ],
+        [
+          29.0,
+          84.0
+        ],
+        [
+          29.0,
+          110.0
+        ],
+        [
+          0.0,
+          110.0
+        ]
+      ],
+      [
+        [
+          1.0,
+          182.0
+        ],
+        [
+          126.0,
+          182.0
+        ],
+        [
+          126.0,
+          203.0
+        ],
+        [
+          1.0,
+          203.0
+        ]
+      ],
+      [
+        [
+          1.0,
+          207.0
+        ],
+        [
+          63.0,
+          208.0
+        ],
+        [
+          63.0,
+          235.0
+        ],
+        [
+          1.0,
+          233.0
+        ]
+      ],
+      [
+        [
+          97.0,
+          210.0
+        ],
+        [
+          397.0,
+          211.0
+        ],
+        [
+          397.0,
+          236.0
+        ],
+        [
+          97.0,
+          236.0
+        ]
+      ],
+      [
+        [
+          3.0,
+          238.0
+        ],
+        [
+          84.0,
+          240.0
+        ],
+        [
+          84.0,
+          266.0
+        ],
+        [
+          3.0,
+          264.0
+        ]
+      ],
+      [
+        [
+          125.0,
+          240.0
+        ],
+        [
+          272.0,
+          242.0
+        ],
+        [
+          272.0,
+          266.0
+        ],
+        [
+          124.0,
+          265.0
+        ]
+      ],
+      [
+        [
+          124.0,
+          271.0
+        ],
+        [
+          317.0,
+          270.0
+        ],
+        [
+          317.0,
+          287.0
+        ],
+        [
+          124.0,
+          287.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.99996,
+      0.99972,
+      0.99991,
+      0.99953,
+      0.99993,
+      0.99971,
+      0.95179
+    ],
+    "raw": {
+      "txts": [
+        "ER",
+        "ames Becker",
+        "Name",
+        "Express Appraisal Services Inc",
+        "Address",
+        "179 Roberts St",
+        "Holbrook, NY 11741"
+      ],
+      "scores": [
+        0.99996,
+        0.99972,
+        0.99991,
+        0.99953,
+        0.99993,
+        0.99971,
+        0.95179
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Express Appraisal Services Inc",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "document signature block showing the name Express Appraisal Services Inc",
+    "confidence": 1.0,
+    "reason": "The text 'Express Appraisal Services Inc' is explicitly printed on the document as the name of the organization."
+  },
+  "validation": {
+    "expected_label": "Express Appraisal Services Inc",
+    "ocr_label_match": true,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

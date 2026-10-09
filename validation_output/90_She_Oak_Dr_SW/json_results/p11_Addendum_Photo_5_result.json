@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\90_She_Oak_Dr_SW\\images\\p11_Addendum_Photo_5.png",
+  "expected_label": "Bath",
+  "paddleocr": {
+    "text": [
+      "9"
+    ],
+    "boxes": [
+      [
+        [
+          216.0,
+          0.0
+        ],
+        [
+          459.0,
+          0.0
+        ],
+        [
+          459.0,
+          351.0
+        ],
+        [
+          241.0,
+          351.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.84661
+    ],
+    "raw": {
+      "txts": [
+        "9"
+      ],
+      "scores": [
+        0.84661
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Bath",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A small bathroom with a toilet and sink.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a bathroom with a toilet and sink, matching the expected label."
+  },
+  "validation": {
+    "expected_label": "Bath",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

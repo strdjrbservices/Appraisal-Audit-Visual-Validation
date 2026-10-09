@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p27_Photo_1.png",
+  "expected_label": "Appraisal Asset 1",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Appraisal Asset 1",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A smoke detector mounted on a white wall.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a smoke detector, which aligns with the expected label of an appraisal asset."
+  },
+  "validation": {
+    "expected_label": "Appraisal Asset 1",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

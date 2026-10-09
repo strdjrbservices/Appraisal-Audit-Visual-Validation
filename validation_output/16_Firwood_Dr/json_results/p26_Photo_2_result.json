@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p26_Photo_2.png",
+  "expected_label": "Uncovered Patio and Inground Pool",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Uncovered Patio and Inground Pool",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "An uncovered outdoor patio with an in-ground swimming pool, a slide, a bench, and a pool cover.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows an outdoor patio area with an in-ground pool and associated features like a slide and pool cover, aligning with the expected label."
+  },
+  "validation": {
+    "expected_label": "Uncovered Patio and Inground Pool",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

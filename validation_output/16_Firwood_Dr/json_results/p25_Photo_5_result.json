@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p25_Photo_5.png",
+  "expected_label": "Unfinished Basement",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Unfinished Basement",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A small, unfinished basement room containing a washing machine, dryer, and a small freezer. The floor is dirty and there are piles of laundry.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a basement space that is unfinished, with laundry appliances and a dirty floor."
+  },
+  "validation": {
+    "expected_label": "Unfinished Basement",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

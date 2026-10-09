@@ -1,0 +1,78 @@
+{
+  "image_path": "validation_output\\images\\p14_Water_Heater.png",
+  "expected_label": "Water Heater",
+  "paddleocr": {
+    "text": [
+      "Batmroom 2",
+      "Water Heater"
+    ],
+    "boxes": [
+      [
+        [
+          276.0,
+          0.0
+        ],
+        [
+          425.0,
+          0.0
+        ],
+        [
+          425.0,
+          12.0
+        ],
+        [
+          276.0,
+          12.0
+        ]
+      ],
+      [
+        [
+          262.0,
+          379.0
+        ],
+        [
+          439.0,
+          379.0
+        ],
+        [
+          439.0,
+          403.0
+        ],
+        [
+          262.0,
+          403.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.85247,
+      0.99636
+    ],
+    "raw": {
+      "txts": [
+        "Batmroom 2",
+        "Water Heater"
+      ],
+      "scores": [
+        0.85247,
+        0.99636
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Water Heater",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "AO Smith brand residential water heater",
+    "confidence": 1.0,
+    "reason": "The image clearly shows an AO Smith branded water heater tank with associated plumbing connections."
+  },
+  "validation": {
+    "expected_label": "Water Heater",
+    "ocr_label_match": true,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

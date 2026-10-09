@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\1425_Camden_Rd\\images\\p28_Photo_2.png",
+  "expected_label": "Appraisal Asset 2",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Appraisal Asset 2",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A bedroom interior with a window, hardwood floor, and various items scattered across the floor including a printer, pillows, and a framed picture.",
+    "confidence": 0.98,
+    "reason": "The image clearly depicts a bedroom, aligning with the expected label 'Appraisal Asset 2'."
+  },
+  "validation": {
+    "expected_label": "Appraisal Asset 2",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

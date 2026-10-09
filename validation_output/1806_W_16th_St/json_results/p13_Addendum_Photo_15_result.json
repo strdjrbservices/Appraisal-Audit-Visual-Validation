@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\1806_W_16th_St\\images\\p13_Addendum_Photo_15.png",
+  "expected_label": "Bathroom 1",
+  "paddleocr": {
+    "text": [
+      "日"
+    ],
+    "boxes": [
+      [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          236.0,
+          0.0
+        ],
+        [
+          216.0,
+          257.0
+        ],
+        [
+          0.0,
+          238.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.52332
+    ],
+    "raw": {
+      "txts": [
+        "日"
+      ],
+      "scores": [
+        0.52332
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Bathroom 1",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A bathroom vanity with a sink, mirror, light fixture, and tiled floor.",
+    "confidence": 1.0,
+    "reason": "The image clearly depicts a standard residential bathroom vanity area."
+  },
+  "validation": {
+    "expected_label": "Bathroom 1",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

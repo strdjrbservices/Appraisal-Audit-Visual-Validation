@@ -1,0 +1,122 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p23_Photo_1.png",
+  "expected_label": "Vladimir Rodriguez Garcia & Ramon Rodriguez",
+  "paddleocr": {
+    "text": [
+      "a la mode, inc.",
+      "SUBJECT",
+      "20 Lehigh Ave",
+      "Google"
+    ],
+    "boxes": [
+      [
+        [
+          31.253721237182617,
+          41.495967864990234
+        ],
+        [
+          225.83334350585938,
+          43.52016067504883
+        ],
+        [
+          225.83334350585938,
+          80.96774291992188
+        ],
+        [
+          31.253721237182617,
+          78.94355010986328
+        ]
+      ],
+      [
+        [
+          726.9010620117188,
+          798.5443725585938
+        ],
+        [
+          830.7440795898438,
+          798.5443725585938
+        ],
+        [
+          830.7440795898438,
+          825.8709716796875
+        ],
+        [
+          726.9010620117188,
+          825.8709716796875
+        ]
+      ],
+      [
+        [
+          723.8765258789062,
+          829.9193725585938
+        ],
+        [
+          876.1123657226562,
+          829.9193725585938
+        ],
+        [
+          876.1123657226562,
+          864.3306274414062
+        ],
+        [
+          723.8765258789062,
+          864.3306274414062
+        ]
+      ],
+      [
+        [
+          39.31919860839844,
+          1941.2015380859375
+        ],
+        [
+          138.12127685546875,
+          1941.2015380859375
+        ],
+        [
+          138.12127685546875,
+          1980.67333984375
+        ],
+        [
+          39.31919860839844,
+          1980.67333984375
+        ]
+      ]
+    ],
+    "confidence": [
+      0.99795,
+      0.99973,
+      0.98279,
+      0.99998
+    ],
+    "raw": {
+      "txts": [
+        "a la mode, inc.",
+        "SUBJECT",
+        "20 Lehigh Ave",
+        "Google"
+      ],
+      "scores": [
+        0.99795,
+        0.99973,
+        0.98279,
+        0.99998
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Vladimir Rodriguez Garcia & Ramon Rodriguez",
+    "label_present": false,
+    "label_correct": false,
+    "observed_object": "An aerial map view of a residential neighborhood with a subject property marker for 20 Lehigh Ave.",
+    "confidence": 1.0,
+    "reason": "The image shows a map view of a neighborhood, not the names of individuals."
+  },
+  "validation": {
+    "expected_label": "Vladimir Rodriguez Garcia & Ramon Rodriguez",
+    "ocr_label_match": false,
+    "gemma_label_correct": false,
+    "gemma_confidence": 1.0,
+    "status": "FAIL",
+    "reason": "Image evidence does not sufficiently support the expected label."
+  }
+}

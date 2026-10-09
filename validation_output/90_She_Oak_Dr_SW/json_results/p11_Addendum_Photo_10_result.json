@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\90_She_Oak_Dr_SW\\images\\p11_Addendum_Photo_10.png",
+  "expected_label": "Photo Addendum Slot 10",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Photo Addendum Slot 10",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A laundry room with a washing machine hookup, cabinets, and ductwork.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a laundry room setup, aligning with the expected label of 'Photo Addendum Slot 10'."
+  },
+  "validation": {
+    "expected_label": "Photo Addendum Slot 10",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

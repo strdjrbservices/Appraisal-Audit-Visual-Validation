@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p30_Photo_1.png",
+  "expected_label": "Comparable 7",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 7",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Exterior view of a two-story house with a brick and siding facade, asphalt driveway, and a well-maintained lawn under a blue sky with clouds.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows the exterior of a residential property, aligning with the 'Comparable 7' label which typically represents exterior property views."
+  },
+  "validation": {
+    "expected_label": "Comparable 7",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

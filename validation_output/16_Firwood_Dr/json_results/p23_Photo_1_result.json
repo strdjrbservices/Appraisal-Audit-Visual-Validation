@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p23_Photo_1.png",
+  "expected_label": "Foyer",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Foyer",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A small entryway with a sliding glass door, a door, a wreath, a welcome mat, and a coat rack.",
+    "confidence": 0.98,
+    "reason": "The image clearly depicts an entryway, which is commonly referred to as a foyer."
+  },
+  "validation": {
+    "expected_label": "Foyer",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

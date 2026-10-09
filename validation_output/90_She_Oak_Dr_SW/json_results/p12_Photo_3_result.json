@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\90_She_Oak_Dr_SW\\images\\p12_Photo_3.png",
+  "expected_label": "Comparable 3",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 3",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Exterior view of a two-story house with a white garage door and a light-colored roof. The house has a driveway and a lawn.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows the exterior of a house, which aligns with the 'Comparable 3' label indicating a front exterior view."
+  },
+  "validation": {
+    "expected_label": "Comparable 3",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

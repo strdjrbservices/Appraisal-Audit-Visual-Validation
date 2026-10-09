@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p26_Photo_3.png",
+  "expected_label": "Additional Street View",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Additional Street View",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A residential property viewed from the driveway or an adjacent road",
+    "confidence": 0.95,
+    "reason": "The image provides a clear view of the residential property exterior from the street level/driveway, which qualifies as an additional street view."
+  },
+  "validation": {
+    "expected_label": "Additional Street View",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\90_She_Oak_Dr_SW\\images\\p11_Addendum_Photo_7.png",
+  "expected_label": "Bedroom",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Bedroom",
+    "label_present": false,
+    "label_correct": false,
+    "observed_object": "A kitchen interior with u-shaped cabinets, a stainless steel oven, a microwave, a sink, and a dishwasher.",
+    "confidence": 0.9,
+    "reason": "The image depicts a kitchen, not a bedroom."
+  },
+  "validation": {
+    "expected_label": "Bedroom",
+    "ocr_label_match": false,
+    "gemma_label_correct": false,
+    "gemma_confidence": 0.9,
+    "status": "FAIL",
+    "reason": "Image evidence does not sufficiently support the expected label."
+  }
+}

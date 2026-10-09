@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p32_Photo_2.png",
+  "expected_label": "Comparable 5",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 5",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Front exterior of a residential home",
+    "confidence": 0.98,
+    "reason": "The image shows the front elevation of a house, which is consistent with typical comparable property photographs used in appraisal reports."
+  },
+  "validation": {
+    "expected_label": "Comparable 5",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

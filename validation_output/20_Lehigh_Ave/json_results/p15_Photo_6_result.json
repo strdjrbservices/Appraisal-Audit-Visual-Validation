@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p15_Photo_6.png",
+  "expected_label": "Bedroom",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Bedroom",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "An empty bedroom featuring hardwood flooring, a closet with bi-fold doors, and an open doorway leading to a hallway.",
+    "confidence": 1.0,
+    "reason": "The presence of a residential closet, typical room layout, and interior doors is consistent with a bedroom."
+  },
+  "validation": {
+    "expected_label": "Bedroom",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

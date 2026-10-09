@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p16_Photo_6.png",
+  "expected_label": "Drop Stairs",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Drop Stairs",
+    "label_present": false,
+    "label_correct": false,
+    "observed_object": "Attic space with HVAC ductwork and insulation",
+    "confidence": 0.99,
+    "reason": "The image shows an attic interior with ductwork, not drop-down attic stairs."
+  },
+  "validation": {
+    "expected_label": "Drop Stairs",
+    "ocr_label_match": false,
+    "gemma_label_correct": false,
+    "gemma_confidence": 0.99,
+    "status": "FAIL",
+    "reason": "Image evidence does not sufficiently support the expected label."
+  }
+}

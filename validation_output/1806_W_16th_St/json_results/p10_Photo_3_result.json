@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\1806_W_16th_St\\images\\p10_Photo_3.png",
+  "expected_label": "Subject Street",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Street",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A street scene showing a residential road with sidewalks and surrounding properties.",
+    "confidence": 1.0,
+    "reason": "The image clearly depicts a residential street scene, consistent with the subject street label."
+  },
+  "validation": {
+    "expected_label": "Subject Street",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

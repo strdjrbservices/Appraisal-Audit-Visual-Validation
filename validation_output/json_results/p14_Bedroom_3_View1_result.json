@@ -1,0 +1,78 @@
+{
+  "image_path": "validation_output\\images\\p14_Bedroom_3_View1.png",
+  "expected_label": "Bedroom 3",
+  "paddleocr": {
+    "text": [
+      "YO!?",
+      "Bedroom 3"
+    ],
+    "boxes": [
+      [
+        [
+          44.0,
+          126.0
+        ],
+        [
+          83.0,
+          122.0
+        ],
+        [
+          85.0,
+          144.0
+        ],
+        [
+          46.0,
+          147.0
+        ]
+      ],
+      [
+        [
+          135.0,
+          369.0
+        ],
+        [
+          279.0,
+          369.0
+        ],
+        [
+          279.0,
+          389.0
+        ],
+        [
+          135.0,
+          389.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.81666,
+      0.97935
+    ],
+    "raw": {
+      "txts": [
+        "YO!?",
+        "Bedroom 3"
+      ],
+      "scores": [
+        0.81666,
+        0.97935
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Bedroom 3",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A bedroom containing a bed, nightstand, and dresser.",
+    "confidence": 1.0,
+    "reason": "The image clearly shows a furnished bedroom, consistent with the provided label."
+  },
+  "validation": {
+    "expected_label": "Bedroom 3",
+    "ocr_label_match": true,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

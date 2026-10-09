@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p20_Photo_1.png",
+  "expected_label": "Property Address",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Property Address",
+    "label_present": true,
+    "label_correct": false,
+    "observed_object": "Exterior front view of a residential property",
+    "confidence": 0.95,
+    "reason": "The image shows the exterior of a house, which is not an 'address' document, sign, or specific display of the street address text."
+  },
+  "validation": {
+    "expected_label": "Property Address",
+    "ocr_label_match": false,
+    "gemma_label_correct": false,
+    "gemma_confidence": 0.95,
+    "status": "FAIL",
+    "reason": "Image evidence does not sufficiently support the expected label."
+  }
+}

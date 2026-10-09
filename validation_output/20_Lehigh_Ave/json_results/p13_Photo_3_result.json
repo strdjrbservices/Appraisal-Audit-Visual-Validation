@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p13_Photo_3.png",
+  "expected_label": "Subject Street",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Street",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A residential street showing the road, sidewalks, parked cars, and surrounding houses.",
+    "confidence": 1.0,
+    "reason": "The image clearly depicts a residential street scene, which matches the expected label of 'Subject Street'."
+  },
+  "validation": {
+    "expected_label": "Subject Street",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

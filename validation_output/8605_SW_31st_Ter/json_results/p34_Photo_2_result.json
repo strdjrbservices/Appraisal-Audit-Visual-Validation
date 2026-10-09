@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p34_Photo_2.png",
+  "expected_label": "Subject Dining",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Dining",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "An empty residential room featuring wood-style flooring, painted walls, a window, and recessed lighting.",
+    "confidence": 0.85,
+    "reason": "The room layout, featuring open space and hard flooring, is consistent with a dining area or living area in a residential property."
+  },
+  "validation": {
+    "expected_label": "Subject Dining",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.85,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

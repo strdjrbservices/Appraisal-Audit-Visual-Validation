@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p28_Photo_1.png",
+  "expected_label": "Comparable 1",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 1",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Exterior view of a two-story house with a red door and garage, surrounded by greenery and a well-maintained lawn.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows the exterior of a residential property, aligning with the 'Comparable 1' label which typically represents exterior views of properties for appraisal purposes."
+  },
+  "validation": {
+    "expected_label": "Comparable 1",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

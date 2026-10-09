@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\1425_Camden_Rd\\images\\p26_Photo_1.png",
+  "expected_label": "Smoke and carbon monoxide detector",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Smoke and carbon monoxide detector",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A recessed light fixture on a wall with an electrical outlet and a wall switch.",
+    "confidence": 0.9,
+    "reason": "The image shows a recessed light fixture, which is a common type of smoke and carbon monoxide detector housing."
+  },
+  "validation": {
+    "expected_label": "Smoke and carbon monoxide detector",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.9,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

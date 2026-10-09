@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\images\\p13_Living_Room.png",
+  "expected_label": "Living Room",
+  "paddleocr": {
+    "text": [
+      "Living Room"
+    ],
+    "boxes": [
+      [
+        [
+          125.0,
+          371.0
+        ],
+        [
+          288.0,
+          374.0
+        ],
+        [
+          287.0,
+          389.0
+        ],
+        [
+          125.0,
+          389.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.90221
+    ],
+    "raw": {
+      "txts": [
+        "Living Room"
+      ],
+      "scores": [
+        0.90221
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Living Room",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A living room area featuring a black sectional sofa, a television mounted on the wall, and hardwood flooring.",
+    "confidence": 1.0,
+    "reason": "The image clearly shows a typical living room layout with residential furniture and an entertainment setup."
+  },
+  "validation": {
+    "expected_label": "Living Room",
+    "ocr_label_match": true,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p25_Photo_4.png",
+  "expected_label": "ADU Bathroom",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "ADU Bathroom",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A small bathroom within an Accessory Dwelling Unit (ADU) featuring a walk-in shower, toilet, vanity, and shelving.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a bathroom setup consistent with an ADU, including a shower, toilet, and vanity."
+  },
+  "validation": {
+    "expected_label": "ADU Bathroom",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

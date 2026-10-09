@@ -61,12 +61,15 @@ def extract_master_subject(doc) -> dict:
 
         # Check for File #
         if not master["file_no"]:
-            m_file = re.search(r"(?:File\s*(?:No|#)[:\.\s]*|R2[0-9]-[0-9]+|PA\s*\d+|JDS\d+)([A-Z0-9_-]{5,})", text, re.IGNORECASE)
+            m_file = re.search(r"(?:File\s*(?:No|#)[:\.\s]*|R2[0-9]-[0-9]+|PA\s*\d+|JDS\d+)([A-Z0-9_-]{4,})", text, re.IGNORECASE)
             if m_file:
-                master["file_no"] = m_file.group(0).strip()
+                candidate = m_file.group(0).strip()
+                # Clean header artifacts
+                candidate = re.sub(r"(?i)^(?:File\s*(?:No|#)[:\.\s]*\s*)", "", candidate).strip()
+                if candidate and candidate.upper() not in ("SUBJECT", "PROPERTY", "BORROWER", "APPRAISAL", "LENDER", "FORM"):
+                    master["file_no"] = candidate
 
-        # Look for URAR Subject Form Block (total software layout)
-        # Block y around 70-80 with Address, City, State, Zip, Borrower, Owner, County
+        # Look for URAR Subject Form Block (Total / ACI / ClickFORMS layout)
         for b in blocks:
             lines = [clean_text(l) for l in b[4].splitlines() if clean_text(l)]
             if len(lines) >= 4:
@@ -75,14 +78,14 @@ def extract_master_subject(doc) -> dict:
                     if not master["street_address"]:
                         master["street_address"] = lines[0]
                         master["source_page"] = pno + 1
-                    # Total software layout: [Street, City, State, Zip, Borrower, Owner, County]
                     if len(lines) >= 4:
                         if re.match(r"^[A-Z]{2}$", lines[2], re.IGNORECASE) and re.match(r"^\d{5}", lines[3]):
                             master["city"] = lines[1]
                             master["state"] = lines[2].upper()
                             master["zip_code"] = lines[3]
                             if len(lines) >= 5 and not master["borrower"]:
-                                master["borrower"] = lines[4]
+                                if lines[4].upper() not in ("SUBJECT", "PROPERTY", "OWNER"):
+                                    master["borrower"] = lines[4]
                             if len(lines) >= 7 and not master["county"]:
                                 master["county"] = lines[6]
                             break
@@ -99,7 +102,6 @@ def extract_master_subject(doc) -> dict:
                 if street_regex.match(line):
                     master["street_address"] = line
                     master["source_page"] = pno + 1
-                    # Next line often has City, State Zip
                     if idx + 1 < len(lines):
                         m_csz = re.search(r"([A-Za-z\s]+)[,\s]+([A-Z]{2})[,\s]+(\d{5})", lines[idx+1])
                         if m_csz:
@@ -196,12 +198,11 @@ def extract_section_address(page, doc, pno: int, sec_type: str, master: dict) ->
         "found_via": "none"
     }
 
-    norm_master_street = normalize_address(master["street_address"])
+    norm_master_street = normalize_address(master.get("street_address", ""))
 
     # 1. Sales Comparison Approach Special Extraction (Subject Column)
     if "Sales Comparison" in sec_type:
         for b in blocks:
-            # Look for block containing subject address (x around 50 to 180, y around 60 to 120)
             if 50 <= b[1] <= 140 and b[0] < 180:
                 btext = b[4].strip()
                 if any(hdr in btext for hdr in ["FEATURE", "Proximity to Subject", "Sale Price", "ITEM"]):
@@ -223,7 +224,6 @@ def extract_section_address(page, doc, pno: int, sec_type: str, master: dict) ->
                         return extracted
 
     # 2. Standard Header Table Extraction (Total / Fannie Mae Forms)
-    # Header table is located at y: 40 to 120
     for b in blocks:
         if 40 <= b[1] <= 120:
             btext = b[4].strip()
@@ -244,7 +244,6 @@ def extract_section_address(page, doc, pno: int, sec_type: str, master: dict) ->
                         extracted["found_via"] = "Standard Header Table"
                         return extracted
                 
-                # Check line 0 or line 1
                 if any(k in lines[0].lower() for k in [" st", " street", " rd", " road", " ave", " dr", " ln", " way", " blvd", " ct", " ter"]):
                     extracted["street_address"] = lines[0]
                     if len(lines) > 1:
@@ -264,20 +263,17 @@ def extract_section_address(page, doc, pno: int, sec_type: str, master: dict) ->
             extracted["found_via"] = "Page Text Search"
             return extracted
 
-    # 4. If Scanned Image Page (like License / E&O / Scanned Survey) with no text, try fast OCR
+    # 4. Scanned Image Pages: Header OCR
     if sec_type in ["Appraiser License / Certification", "E & O Insurance Policy", "Building Sketch Page", "Location / Comparable Sales Map"]:
         if len(text.strip()) < 80:
+            tmp_path = None
             try:
-                # Render top header rect (y: 0 to 200) to OCR
                 rect = pymupdf.Rect(0, 0, page.rect.width, 200)
                 pix = page.get_pixmap(clip=rect, dpi=150)
                 tmp_path = os.path.join(os.environ.get("TEMP", "."), f"ocr_hdr_p{pno+1}.png")
                 pix.save(tmp_path)
                 ocr_res = PaddleOCRExtractor(lang="en").extract(tmp_path)
                 ocr_texts = ocr_res.get("text", [])
-                if os.path.exists(tmp_path):
-                    os.remove(tmp_path)
-
                 ocr_full = " ".join(str(t) for t in ocr_texts)
                 if norm_master_street and norm_master_street in normalize_address(ocr_full):
                     extracted["street_address"] = master["street_address"]
@@ -286,6 +282,12 @@ def extract_section_address(page, doc, pno: int, sec_type: str, master: dict) ->
                     return extracted
             except Exception:
                 pass
+            finally:
+                if tmp_path and os.path.exists(tmp_path):
+                    try:
+                        os.remove(tmp_path)
+                    except Exception:
+                        pass
 
     return extracted
 
@@ -328,16 +330,7 @@ def evaluate_address_match(master: dict, extracted: dict) -> dict:
 
 def validate_subject_address_consistency(pdf_path: str) -> dict:
     """
-    Complete audit of Subject Property Address consistency across all pages and sections:
-    - Subject Property Section (Page 1)
-    - Sales Comparison Approach (Comps 1-3 Subject Column)
-    - Additional Sales Comparison Approach (Comps 4-6, 7-9)
-    - Subject Photo Pages
-    - Interior / Photo Addenda
-    - Location / Comparable Sales Map
-    - Aerial Map Page
-    - Building Sketch Page
-    - Appraiser License & E&O Insurance Policy
+    Complete audit of Subject Property Address consistency across all pages and sections.
     """
     doc = pymupdf.open(pdf_path)
     master = extract_master_subject(doc)
@@ -363,7 +356,6 @@ def validate_subject_address_consistency(pdf_path: str) -> dict:
         page_text = page.get_text()
         sec_type = identify_section_type(page_text, pno + 1)
 
-        # Only evaluate pages that belong to key appraisal sections
         if sec_type in target_sections or any(kw in sec_type for kw in ["Sales Comparison", "Photo", "Map", "Sketch", "License"]):
             extracted = extract_section_address(page, doc, pno, sec_type, master)
             eval_res = evaluate_address_match(master, extracted)
@@ -400,9 +392,3 @@ def validate_subject_address_consistency(pdf_path: str) -> dict:
         "overall_status": "PASS" if mismatch_count == 0 and match_rate >= 80 else ("REVIEW" if mismatch_count == 0 else "MISMATCH"),
         "sections": sections_audited
     }
-
-if __name__ == "__main__":
-    import sys
-    test_pdf = sys.argv[1] if len(sys.argv) > 1 else r"C:\Users\Admin\Downloads\16 Firwood Dr.pdf"
-    res = validate_subject_address_consistency(test_pdf)
-    print(json.dumps(res, indent=2))

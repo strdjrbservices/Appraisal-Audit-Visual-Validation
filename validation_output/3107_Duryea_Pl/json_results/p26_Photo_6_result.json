@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p26_Photo_6.png",
+  "expected_label": "Living Room",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Living Room",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A furnished living room with a sofa, leather armchairs, a fireplace, television, coffee table, and an area rug.",
+    "confidence": 1.0,
+    "reason": "The image clearly depicts a standard residential living room space containing typical furniture and amenities."
+  },
+  "validation": {
+    "expected_label": "Living Room",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\images\\p13_Kitchen_Addl.png",
+  "expected_label": "Kitchen Additional View",
+  "paddleocr": {
+    "text": [
+      "Additional View"
+    ],
+    "boxes": [
+      [
+        [
+          104.0,
+          379.0
+        ],
+        [
+          310.0,
+          379.0
+        ],
+        [
+          310.0,
+          403.0
+        ],
+        [
+          104.0,
+          403.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.99752
+    ],
+    "raw": {
+      "txts": [
+        "Additional View"
+      ],
+      "scores": [
+        0.99752
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Kitchen Additional View",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Kitchen space showing cabinetry, appliances, and sink",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a kitchen area with cabinets, a refrigerator, a dishwasher, and a sink, which matches the expected label."
+  },
+  "validation": {
+    "expected_label": "Kitchen Additional View",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

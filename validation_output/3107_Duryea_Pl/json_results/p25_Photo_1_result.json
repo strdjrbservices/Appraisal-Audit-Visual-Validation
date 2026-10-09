@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p25_Photo_1.png",
+  "expected_label": "Subject Front",
+  "paddleocr": {
+    "text": [
+      "DLa"
+    ],
+    "boxes": [
+      [
+        [
+          159.0,
+          452.0
+        ],
+        [
+          309.0,
+          458.0
+        ],
+        [
+          307.0,
+          518.0
+        ],
+        [
+          157.0,
+          513.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.6415
+    ],
+    "raw": {
+      "txts": [
+        "DLa"
+      ],
+      "scores": [
+        0.6415
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Front",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Front exterior view of a single-family house",
+    "confidence": 1.0,
+    "reason": "The image shows the primary street-facing side of the residence, including the entryway, driveway path, and facade."
+  },
+  "validation": {
+    "expected_label": "Subject Front",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

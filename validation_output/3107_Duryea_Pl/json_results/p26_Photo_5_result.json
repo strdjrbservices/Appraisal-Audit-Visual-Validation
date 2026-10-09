@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p26_Photo_5.png",
+  "expected_label": "Foyer",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Foyer",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "An entryway foyer featuring a front door, a chandelier, a shoe storage unit, and shoes left on the floor.",
+    "confidence": 1.0,
+    "reason": "The image clearly shows an entrance area with a front door, consistent with the definition of a foyer."
+  },
+  "validation": {
+    "expected_label": "Foyer",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

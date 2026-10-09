@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p25_Photo_1.png",
+  "expected_label": "ADU Living Room",
+  "paddleocr": {
+    "text": [
+      "日"
+    ],
+    "boxes": [
+      [
+        [
+          240.0,
+          189.0
+        ],
+        [
+          247.0,
+          189.0
+        ],
+        [
+          247.0,
+          201.0
+        ],
+        [
+          240.0,
+          201.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.54153
+    ],
+    "raw": {
+      "txts": [
+        "日"
+      ],
+      "scores": [
+        0.54153
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "ADU Living Room",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A small, interior room with light gray wood-look flooring, a window with a view of the exterior, and beige walls. A painting is hanging on the wall.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a small living room space with the described features."
+  },
+  "validation": {
+    "expected_label": "ADU Living Room",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

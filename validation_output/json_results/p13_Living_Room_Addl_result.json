@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\images\\p13_Living_Room_Addl.png",
+  "expected_label": "Living Room Additional View",
+  "paddleocr": {
+    "text": [
+      "Additional View"
+    ],
+    "boxes": [
+      [
+        [
+          59.0,
+          372.0
+        ],
+        [
+          264.0,
+          373.0
+        ],
+        [
+          263.0,
+          389.0
+        ],
+        [
+          58.0,
+          389.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.94766
+    ],
+    "raw": {
+      "txts": [
+        "Additional View"
+      ],
+      "scores": [
+        0.94766
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Living Room Additional View",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Interior living room space with a large sectional sofa, wood-style flooring, ceiling fan, and entry to another room.",
+    "confidence": 0.98,
+    "reason": "The image clearly depicts an interior living area with furniture typical of a living room, matching the provided label."
+  },
+  "validation": {
+    "expected_label": "Living Room Additional View",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

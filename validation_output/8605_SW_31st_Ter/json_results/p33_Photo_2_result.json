@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p33_Photo_2.png",
+  "expected_label": "Subject Living",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Living",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "empty living room",
+    "confidence": 0.95,
+    "reason": "The image shows a spacious, open living room area with wood-look flooring, a window facing the backyard, and adjacent kitchen counter space."
+  },
+  "validation": {
+    "expected_label": "Subject Living",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

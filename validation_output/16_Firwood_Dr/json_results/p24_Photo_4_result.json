@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p24_Photo_4.png",
+  "expected_label": "Half Bathroom",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Half Bathroom",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A small bathroom with a white toilet, a white sink with a dark cabinet underneath, and tiled walls featuring decorative bird motifs.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a small bathroom with the standard fixtures of a half bathroom – toilet and sink – and the tile pattern is typical of bathroom spaces."
+  },
+  "validation": {
+    "expected_label": "Half Bathroom",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

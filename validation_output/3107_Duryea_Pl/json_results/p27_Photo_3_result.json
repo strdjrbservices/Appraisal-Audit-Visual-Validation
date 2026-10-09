@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p27_Photo_3.png",
+  "expected_label": "Additional Kitchen",
+  "paddleocr": {
+    "text": [
+      "1121"
+    ],
+    "boxes": [
+      [
+        [
+          638.0,
+          168.0
+        ],
+        [
+          667.0,
+          168.0
+        ],
+        [
+          667.0,
+          179.0
+        ],
+        [
+          638.0,
+          179.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.65938
+    ],
+    "raw": {
+      "txts": [
+        "1121"
+      ],
+      "scores": [
+        0.65938
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Additional Kitchen",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Full kitchen including cabinetry, stove, microwave, sink, and countertops",
+    "confidence": 0.95,
+    "reason": "The image clearly shows a fully functional residential kitchen, which is consistent with the label of an additional kitchen."
+  },
+  "validation": {
+    "expected_label": "Additional Kitchen",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

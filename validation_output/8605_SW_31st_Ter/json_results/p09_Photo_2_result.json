@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p09_Photo_2.png",
+  "expected_label": "Comparable 2",
+  "paddleocr": {
+    "text": [
+      "EP-253"
+    ],
+    "boxes": [
+      [
+        [
+          452.0,
+          442.0
+        ],
+        [
+          491.0,
+          444.0
+        ],
+        [
+          489.0,
+          464.0
+        ],
+        [
+          451.0,
+          461.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.69673
+    ],
+    "raw": {
+      "txts": [
+        "EP-253"
+      ],
+      "scores": [
+        0.69673
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 2",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Front exterior view of a residential house with a driveway and parked car",
+    "confidence": 0.95,
+    "reason": "The image shows a standard residential property front view, which is consistent with the labeling of a comparable property in an appraisal report."
+  },
+  "validation": {
+    "expected_label": "Comparable 2",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

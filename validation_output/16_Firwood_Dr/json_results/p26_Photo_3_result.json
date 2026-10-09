@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p26_Photo_3.png",
+  "expected_label": "Heating System",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Heating System",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "An old, blue and gray oil-burning furnace is mounted on a concrete wall in a basement. There are several pipes and wires connected to the furnace.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a furnace, which is a component of a heating system."
+  },
+  "validation": {
+    "expected_label": "Heating System",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

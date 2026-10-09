@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p24_Photo_5.png",
+  "expected_label": "Bathroom",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Bathroom",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A small bathroom with a bathtub/shower combination, toilet, and vanity.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a bathroom with the typical fixtures and features present."
+  },
+  "validation": {
+    "expected_label": "Bathroom",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

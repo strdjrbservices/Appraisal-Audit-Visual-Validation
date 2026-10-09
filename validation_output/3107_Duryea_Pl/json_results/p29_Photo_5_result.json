@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p29_Photo_5.png",
+  "expected_label": "HVAC",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "HVAC",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "An outdoor HVAC condenser unit.",
+    "confidence": 1.0,
+    "reason": "The image clearly shows an outdoor central air conditioning unit, which is a component of an HVAC system."
+  },
+  "validation": {
+    "expected_label": "HVAC",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

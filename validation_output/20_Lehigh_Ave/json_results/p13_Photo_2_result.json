@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p13_Photo_2.png",
+  "expected_label": "Subject Rear",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Rear",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Rear elevation of a two-story residential building with vinyl siding, sliding glass doors, and a back entrance",
+    "confidence": 1.0,
+    "reason": "The image shows the rear exterior view of a house, characterized by features such as a back entry door, sliding glass doors, and private yard space."
+  },
+  "validation": {
+    "expected_label": "Subject Rear",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

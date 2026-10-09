@@ -1,0 +1,78 @@
+{
+  "image_path": "validation_output\\images\\p13_Kitchen.png",
+  "expected_label": "Kitchen",
+  "paddleocr": {
+    "text": [
+      "Real/Rigit Exteriol",
+      "Kitchen"
+    ],
+    "boxes": [
+      [
+        [
+          228.0,
+          0.0
+        ],
+        [
+          471.0,
+          0.0
+        ],
+        [
+          471.0,
+          15.0
+        ],
+        [
+          228.0,
+          15.0
+        ]
+      ],
+      [
+        [
+          298.0,
+          377.0
+        ],
+        [
+          402.0,
+          378.0
+        ],
+        [
+          402.0,
+          403.0
+        ],
+        [
+          298.0,
+          403.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.81127,
+      0.99973
+    ],
+    "raw": {
+      "txts": [
+        "Real/Rigit Exteriol",
+        "Kitchen"
+      ],
+      "scores": [
+        0.81127,
+        0.99973
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Kitchen",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A residential kitchen featuring wooden cabinets, a stove, a sink, and a refrigerator.",
+    "confidence": 1.0,
+    "reason": "The image clearly shows standard kitchen appliances and cabinetry consistent with a residential kitchen."
+  },
+  "validation": {
+    "expected_label": "Kitchen",
+    "ocr_label_match": true,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

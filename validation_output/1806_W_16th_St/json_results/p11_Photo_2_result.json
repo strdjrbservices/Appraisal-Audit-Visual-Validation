@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\1806_W_16th_St\\images\\p11_Photo_2.png",
+  "expected_label": "Comparable 2",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 2",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Front exterior of a single-family house",
+    "confidence": 0.98,
+    "reason": "The image clearly shows the front elevation of a residential property, which is a standard format for a comparable sale photo in an appraisal report."
+  },
+  "validation": {
+    "expected_label": "Comparable 2",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

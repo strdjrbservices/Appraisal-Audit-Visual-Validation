@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\90_She_Oak_Dr_SW\\images\\p11_Addendum_Photo_13.png",
+  "expected_label": "Photo Addendum Slot 13",
+  "paddleocr": {
+    "text": [
+      "W"
+    ],
+    "boxes": [
+      [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          460.0,
+          0.0
+        ],
+        [
+          460.0,
+          350.0
+        ],
+        [
+          0.0,
+          350.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.71858
+    ],
+    "raw": {
+      "txts": [
+        "W"
+      ],
+      "scores": [
+        0.71858
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Photo Addendum Slot 13",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A bathroom interior featuring a vanity with a sink, a toilet, a walk-in shower with a marble-like tile wall, and a doorway.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a bathroom interior, aligning with the expected label 'Photo Addendum Slot 13'."
+  },
+  "validation": {
+    "expected_label": "Photo Addendum Slot 13",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

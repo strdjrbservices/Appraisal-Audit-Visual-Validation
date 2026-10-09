@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\1425_Camden_Rd\\images\\p27_Photo_1.png",
+  "expected_label": "bedroom",
+  "paddleocr": {
+    "text": [
+      "上"
+    ],
+    "boxes": [
+      [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          592.0,
+          0.0
+        ],
+        [
+          592.0,
+          457.0
+        ],
+        [
+          0.0,
+          457.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.60105
+    ],
+    "raw": {
+      "txts": [
+        "上"
+      ],
+      "scores": [
+        0.60105
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "bedroom",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A bedroom with a bed, desk, and chair. The room is painted gray and has a white door.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a bedroom with a bed and desk, matching the expected label."
+  },
+  "validation": {
+    "expected_label": "bedroom",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

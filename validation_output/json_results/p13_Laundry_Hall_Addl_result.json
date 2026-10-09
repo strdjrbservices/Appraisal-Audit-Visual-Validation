@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\images\\p13_Laundry_Hall_Addl.png",
+  "expected_label": "Additional View (Interior/Utility)",
+  "paddleocr": {
+    "text": [
+      "Additional View"
+    ],
+    "boxes": [
+      [
+        [
+          250.0,
+          369.0
+        ],
+        [
+          454.0,
+          369.0
+        ],
+        [
+          454.0,
+          388.0
+        ],
+        [
+          250.0,
+          388.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.98514
+    ],
+    "raw": {
+      "txts": [
+        "Additional View"
+      ],
+      "scores": [
+        0.98514
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Additional View (Interior/Utility)",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Interior view of a kitchen area with an adjacent laundry setup including a washing machine.",
+    "confidence": 0.95,
+    "reason": "The image clearly shows an interior living space containing kitchen appliances and laundry equipment, which fits the category of an interior utility view."
+  },
+  "validation": {
+    "expected_label": "Additional View (Interior/Utility)",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\images\\p10_Subject_Street.png",
+  "expected_label": "Subject Street Scene (1806 W 16th St)",
+  "paddleocr": {
+    "text": [
+      "Form PICPIX.SR - \"TOTAL\" appraisal software by a la mode, inc. - 1-800-ALAMODE"
+    ],
+    "boxes": [
+      [
+        [
+          489.0,
+          331.0
+        ],
+        [
+          1060.0,
+          333.0
+        ],
+        [
+          1060.0,
+          363.0
+        ],
+        [
+          489.0,
+          361.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.99128
+    ],
+    "raw": {
+      "txts": [
+        "Form PICPIX.SR - \"TOTAL\" appraisal software by a la mode, inc. - 1-800-ALAMODE"
+      ],
+      "scores": [
+        0.99128
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Street Scene (1806 W 16th St)",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A view of an asphalt street, a grass verge, and a concrete sidewalk.",
+    "confidence": 0.95,
+    "reason": "The image depicts a standard street scene typical of an appraisal report, showing the roadway and sidewalk adjacent to the property."
+  },
+  "validation": {
+    "expected_label": "Subject Street Scene (1806 W 16th St)",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

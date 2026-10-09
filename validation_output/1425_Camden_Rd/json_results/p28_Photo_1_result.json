@@ -1,0 +1,78 @@
+{
+  "image_path": "validation_output\\1425_Camden_Rd\\images\\p28_Photo_1.png",
+  "expected_label": "Appraisal Asset 1",
+  "paddleocr": {
+    "text": [
+      "0400",
+      "8"
+    ],
+    "boxes": [
+      [
+        [
+          439.0,
+          224.0
+        ],
+        [
+          554.0,
+          226.0
+        ],
+        [
+          553.0,
+          277.0
+        ],
+        [
+          438.0,
+          274.0
+        ]
+      ],
+      [
+        [
+          147.0,
+          328.0
+        ],
+        [
+          178.0,
+          332.0
+        ],
+        [
+          173.0,
+          373.0
+        ],
+        [
+          142.0,
+          369.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.56952,
+      0.51639
+    ],
+    "raw": {
+      "txts": [
+        "0400",
+        "8"
+      ],
+      "scores": [
+        0.56952,
+        0.51639
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Appraisal Asset 1",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A stacked washer and dryer unit installed in a closet.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a modern washer and dryer unit, which aligns with the expected label of an appraisal asset."
+  },
+  "validation": {
+    "expected_label": "Appraisal Asset 1",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

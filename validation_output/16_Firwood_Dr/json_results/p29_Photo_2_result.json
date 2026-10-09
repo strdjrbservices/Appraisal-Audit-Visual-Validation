@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p29_Photo_2.png",
+  "expected_label": "Comparable 5",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 5",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A two-story suburban house with a brick facade, garage, and well-maintained lawn.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a residential property, consistent with the 'Comparable 5' label which typically represents exterior views of residential properties."
+  },
+  "validation": {
+    "expected_label": "Comparable 5",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

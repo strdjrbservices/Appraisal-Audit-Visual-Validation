@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\8605_SW_31st_Ter\\images\\p31_Photo_3.png",
+  "expected_label": "Subject Street Scene",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Subject Street Scene",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A view looking down a residential suburban street with parked vehicles and houses on both sides.",
+    "confidence": 1.0,
+    "reason": "The image clearly shows a residential street scene, consistent with the expected label."
+  },
+  "validation": {
+    "expected_label": "Subject Street Scene",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

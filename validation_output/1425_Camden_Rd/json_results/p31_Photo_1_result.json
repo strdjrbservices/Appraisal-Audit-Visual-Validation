@@ -1,0 +1,78 @@
+{
+  "image_path": "validation_output\\1425_Camden_Rd\\images\\p31_Photo_1.png",
+  "expected_label": "Proximity to Subject",
+  "paddleocr": {
+    "text": [
+      "Lender/Client",
+      "KWIK MORTGAGE CORPORATION"
+    ],
+    "boxes": [
+      [
+        [
+          27.0,
+          0.0
+        ],
+        [
+          134.0,
+          0.0
+        ],
+        [
+          134.0,
+          19.0
+        ],
+        [
+          27.0,
+          19.0
+        ]
+      ],
+      [
+        [
+          161.0,
+          0.0
+        ],
+        [
+          525.0,
+          0.0
+        ],
+        [
+          525.0,
+          19.0
+        ],
+        [
+          161.0,
+          19.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.99897,
+      0.99022
+    ],
+    "raw": {
+      "txts": [
+        "Lender/Client",
+        "KWIK MORTGAGE CORPORATION"
+      ],
+      "scores": [
+        0.99897,
+        0.99022
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Proximity to Subject",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Exterior view of a townhouse with a driveway and landscaping, including trees and a garage.",
+    "confidence": 0.98,
+    "reason": "The image shows the exterior of a property, which is relevant to assessing its proximity to the subject property being appraised."
+  },
+  "validation": {
+    "expected_label": "Proximity to Subject",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

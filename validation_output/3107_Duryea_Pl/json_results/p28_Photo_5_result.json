@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p28_Photo_5.png",
+  "expected_label": "Family Room (Basement)",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Family Room (Basement)",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A finished living space with a fireplace, leather sectional sofa, television, and walk-out sliding glass doors.",
+    "confidence": 0.9,
+    "reason": "The space is clearly furnished as a family room, and the sliding glass doors leading to what appears to be an exterior grade level or patio are consistent with a walk-out basement configuration."
+  },
+  "validation": {
+    "expected_label": "Family Room (Basement)",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.9,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

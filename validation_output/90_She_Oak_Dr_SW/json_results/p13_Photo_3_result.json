@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\90_She_Oak_Dr_SW\\images\\p13_Photo_3.png",
+  "expected_label": "Comparable6",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable6",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "Exterior view of a two-story townhome with brick and stone facade, landscaping, and a walkway.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows the exterior of a residential property, consistent with the 'Comparable6' label which typically represents a property for comparison purposes."
+  },
+  "validation": {
+    "expected_label": "Comparable6",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

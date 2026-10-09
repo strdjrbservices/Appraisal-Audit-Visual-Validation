@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\3107_Duryea_Pl\\images\\p31_Photo_1.png",
+  "expected_label": "Comparable 1",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Comparable 1",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "exterior front view of a split-level residential house",
+    "confidence": 0.98,
+    "reason": "The image shows a single-family residential property, which is typical for a comparable sale appraisal document."
+  },
+  "validation": {
+    "expected_label": "Comparable 1",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

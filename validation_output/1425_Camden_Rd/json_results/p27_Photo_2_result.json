@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\1425_Camden_Rd\\images\\p27_Photo_2.png",
+  "expected_label": "Bath",
+  "paddleocr": {
+    "text": [
+      "J"
+    ],
+    "boxes": [
+      [
+        [
+          160.0,
+          228.0
+        ],
+        [
+          250.0,
+          228.0
+        ],
+        [
+          250.0,
+          337.0
+        ],
+        [
+          160.0,
+          337.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.95667
+    ],
+    "raw": {
+      "txts": [
+        "J"
+      ],
+      "scores": [
+        0.95667
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Bath",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A small bathroom with a corner sink, shower, and tiled walls.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a bathroom with a sink and shower, aligning with the expected label 'Bath'."
+  },
+  "validation": {
+    "expected_label": "Bath",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

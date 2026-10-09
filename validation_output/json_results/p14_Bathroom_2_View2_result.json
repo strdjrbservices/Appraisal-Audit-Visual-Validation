@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\images\\p14_Bathroom_2_View2.png",
+  "expected_label": "Bathroom 2 Additional View",
+  "paddleocr": {
+    "text": [
+      "Bathroem.2"
+    ],
+    "boxes": [
+      [
+        [
+          130.0,
+          373.0
+        ],
+        [
+          282.0,
+          373.0
+        ],
+        [
+          282.0,
+          389.0
+        ],
+        [
+          130.0,
+          389.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.8839
+    ],
+    "raw": {
+      "txts": [
+        "Bathroem.2"
+      ],
+      "scores": [
+        0.8839
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Bathroom 2 Additional View",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A small bathroom featuring a bathtub-shower combination and a toilet.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a bathroom, which matches the expected label of Bathroom 2."
+  },
+  "validation": {
+    "expected_label": "Bathroom 2 Additional View",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

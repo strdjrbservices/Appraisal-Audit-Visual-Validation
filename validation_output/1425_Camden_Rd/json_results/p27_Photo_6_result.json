@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\1425_Camden_Rd\\images\\p27_Photo_6.png",
+  "expected_label": "Kitchen",
+  "paddleocr": {
+    "text": [
+      "11"
+    ],
+    "boxes": [
+      [
+        [
+          111.0,
+          282.0
+        ],
+        [
+          168.0,
+          276.0
+        ],
+        [
+          174.0,
+          332.0
+        ],
+        [
+          117.0,
+          339.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.50925
+    ],
+    "raw": {
+      "txts": [
+        "11"
+      ],
+      "scores": [
+        0.50925
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Kitchen",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A small kitchen with gray walls, black countertops, white cabinets, a stainless steel sink, stove, and dishwasher. There is a window and a wooden cutting board on the counter.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a kitchen with the typical appliances and layout."
+  },
+  "validation": {
+    "expected_label": "Kitchen",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

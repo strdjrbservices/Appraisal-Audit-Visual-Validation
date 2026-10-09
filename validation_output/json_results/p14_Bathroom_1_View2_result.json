@@ -1,0 +1,78 @@
+{
+  "image_path": "validation_output\\images\\p14_Bathroom_1_View2.png",
+  "expected_label": "Bathroom 1 Additional View",
+  "paddleocr": {
+    "text": [
+      "Lcndci/Oiicit",
+      "Bathroom. 1"
+    ],
+    "boxes": [
+      [
+        [
+          151.0,
+          0.0
+        ],
+        [
+          245.0,
+          0.0
+        ],
+        [
+          245.0,
+          8.0
+        ],
+        [
+          151.0,
+          8.0
+        ]
+      ],
+      [
+        [
+          273.0,
+          369.0
+        ],
+        [
+          425.0,
+          369.0
+        ],
+        [
+          425.0,
+          389.0
+        ],
+        [
+          273.0,
+          389.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.72633,
+      0.92772
+    ],
+    "raw": {
+      "txts": [
+        "Lcndci/Oiicit",
+        "Bathroom. 1"
+      ],
+      "scores": [
+        0.72633,
+        0.92772
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Bathroom 1 Additional View",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A residential bathroom featuring a bathtub/shower enclosure and a toilet.",
+    "confidence": 0.98,
+    "reason": "The image clearly depicts a standard bathroom interior consistent with a residential appraisal context."
+  },
+  "validation": {
+    "expected_label": "Bathroom 1 Additional View",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

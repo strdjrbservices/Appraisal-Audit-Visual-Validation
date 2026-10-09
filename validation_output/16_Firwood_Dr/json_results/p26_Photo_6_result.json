@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\16_Firwood_Dr\\images\\p26_Photo_6.png",
+  "expected_label": "Central Air Condenser",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Central Air Condenser",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A black air conditioning unit is located outside on a siding wall next to a brick foundation and surrounded by green plants.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a central air conditioning unit, which matches the expected label."
+  },
+  "validation": {
+    "expected_label": "Central Air Condenser",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

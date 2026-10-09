@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\1425_Camden_Rd\\images\\p27_Photo_4.png",
+  "expected_label": "Dining",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Dining",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A dark wooden dining table with four chairs is present in a room with gray walls and dark wood flooring. There are papers and a plate on the table.",
+    "confidence": 0.98,
+    "reason": "The image clearly shows a dining table and chairs, which aligns with the expected label of 'Dining'."
+  },
+  "validation": {
+    "expected_label": "Dining",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.98,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

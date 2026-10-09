@@ -1,0 +1,29 @@
+{
+  "image_path": "validation_output\\1806_W_16th_St\\images\\p13_Addendum_Photo_9.png",
+  "expected_label": "Breakfast/Laundry",
+  "paddleocr": {
+    "text": [],
+    "boxes": [],
+    "confidence": [],
+    "raw": {
+      "txts": [],
+      "scores": []
+    }
+  },
+  "gemma": {
+    "expected_label": "Breakfast/Laundry",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A room featuring a laundry closet with a washing machine and a living area with a small sofa and television.",
+    "confidence": 0.95,
+    "reason": "The image clearly shows a laundry closet containing a washing machine, which validates the 'Laundry' portion of the label."
+  },
+  "validation": {
+    "expected_label": "Breakfast/Laundry",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 0.95,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "image_path": "validation_output\\20_Lehigh_Ave\\images\\p15_Photo_3.png",
+  "expected_label": "Kitchen",
+  "paddleocr": {
+    "text": [
+      "]]"
+    ],
+    "boxes": [
+      [
+        [
+          229.0,
+          331.0
+        ],
+        [
+          258.0,
+          328.0
+        ],
+        [
+          261.0,
+          368.0
+        ],
+        [
+          233.0,
+          371.0
+        ]
+      ]
+    ],
+    "confidence": [
+      0.7826
+    ],
+    "raw": {
+      "txts": [
+        "]]"
+      ],
+      "scores": [
+        0.7826
+      ]
+    }
+  },
+  "gemma": {
+    "expected_label": "Kitchen",
+    "label_present": true,
+    "label_correct": true,
+    "observed_object": "A modern kitchen featuring white cabinetry, a kitchen island, stainless steel appliances, and a tiled backsplash.",
+    "confidence": 1.0,
+    "reason": "The image clearly depicts a fully equipped kitchen with standard appliances, countertops, and cabinetry."
+  },
+  "validation": {
+    "expected_label": "Kitchen",
+    "ocr_label_match": false,
+    "gemma_label_correct": true,
+    "gemma_confidence": 1.0,
+    "status": "PASS",
+    "reason": "Gemma confirms that the image matches the expected label."
+  }
+}
